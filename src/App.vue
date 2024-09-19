@@ -1,6 +1,8 @@
 <template>
-  <side-nav />
-  <main-body />
+  <n-layout has-sider>
+    <side-nav />
+    <main-body />
+  </n-layout>
 </template>
 
 <script>
@@ -16,13 +18,16 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import 'assets/syles/_color.scss';
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $base-color;
 }
 </style>
