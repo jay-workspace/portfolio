@@ -1,7 +1,7 @@
 <template>
-  <div class="side-nav">
-    <button></button>
-  </div>
+  <n-layout-sider class="side-nav">
+    Handian Bridge
+  </n-layout-sider>
 </template>
 
 <script>
@@ -13,4 +13,10 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style lang="scss">
+@import '../assets/syles/color.scss';
+
+.side-nav {
+  background-color: $side-nav-color;
+}
+</style>
