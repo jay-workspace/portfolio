@@ -1,15 +1,17 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <side-nav />
+  <main-body />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SideNav from './components/SideNav.vue'
+import MainBody from './components/MainBody.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    'side-nav': SideNav,
+    'main-body': MainBody
   }
 }
 </script>
