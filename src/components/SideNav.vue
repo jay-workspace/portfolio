@@ -26,22 +26,33 @@
 <script>
 
 import { defineComponent, h } from "vue";
-import home from "../components/shared/icons/home.svg";
-import SvgIcon from "./shared/helpers/SVGIcon.vue";
+import { 
+  HomeOutline, 
+  SchoolOutline, 
+  BusinessOutline, 
+  MailUnreadOutline, 
+  ConstructOutline 
+} from '@vicons/ionicons5'
+import { NIcon } from 'naive-ui'
 
 export default defineComponent({
   data() {
     return {
-      homeIcon: home,
+      HomeOutline,
+      SchoolOutline,
+      BusinessOutline,
+      MailUnreadOutline,
+      ConstructOutline,
       menuOptions: [
-        {
+        { 
           label: "Home",
           key: "home",
-          icon: this.renderIcon(home),
+          icon: this.renderIcon(HomeOutline),
         },
         {
           label: "Experience",
           key: "experience",
+          icon: this.renderIcon(BusinessOutline),
           children: [
             {
               label: "Wipro",
@@ -66,10 +77,12 @@ export default defineComponent({
         {
           label: "Skills",
           key: "skills",
+          icon: this.renderIcon(ConstructOutline),
         },
         {
           label: "Education",
           key: "education",
+          icon: this.renderIcon(SchoolOutline),
           children: [
             {
               label: "Master's",
@@ -84,6 +97,7 @@ export default defineComponent({
         {
           label: "Contact",
           key: "contact",
+          icon: this.renderIcon(MailUnreadOutline),
         },
       ]
     };
@@ -95,7 +109,7 @@ export default defineComponent({
   },
   methods: {
     renderIcon(icon) {
-      return () => h(SvgIcon, { pathData: icon });
+      return () => h(NIcon, null, { default: () => h(icon) });
     }
   }
 });
@@ -174,6 +188,11 @@ export default defineComponent({
       }
 
       .n-menu-item-content-header:hover {
+        color: $side-nav-color !important;
+        font-size: 1.75rem;
+      }
+
+      .n-icon:hover {
         color: $side-nav-color !important;
         font-size: 1.75rem;
       }
