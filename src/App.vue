@@ -1,7 +1,9 @@
 <template>
-  <n-layout has-sider>
-    <side-nav />
-    <main-body />
+  <n-layout has-sider class="main__layout">
+    <div class="main">
+      <side-nav />
+      <main-body />
+  </div>
   </n-layout>
 </template>
 
@@ -29,5 +31,17 @@ body {
   margin: 0;
   padding: 0;
   background-color: $base-color;
+}
+
+.n-layout-scroll-container {
+  height: inherit !important;
+}
+
+.main{
+  display: flex;
+  &__layout {
+    display: flex;
+    min-height: inherit; 
+  }
 }
 </style>
