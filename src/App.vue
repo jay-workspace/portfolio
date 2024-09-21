@@ -25,6 +25,8 @@ export default {
 
 #app {
   min-height: 100vh;
+  font-family: 'Ramaraja';
+  color: white;
 }
 
 body {
