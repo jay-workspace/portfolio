@@ -1,8 +1,6 @@
 <template>
   <n-layout>
-    <n-layout-header bordered>
-      Yiheyuan Road
-    </n-layout-header>
+    <experience-page/>
     <n-layout-content content-style="padding: 24px;">
       Pingshan Road
     </n-layout-content>
@@ -13,8 +11,13 @@
 </template>
 
 <script>
+import ExperiencePage from './pages/ExperiencePage.vue' 
+
 export default {
   name: 'MainBody',
+  components: {
+    'experience-page': ExperiencePage,
+  },
   props: {
     msg: String
   }
@@ -25,7 +28,9 @@ export default {
 .n-layout-header {
   padding: 24px;
 }
-
+.n-layout {
+  height: 100vh;
+}
 .n-layout-footer {
   padding: 24px;
 }

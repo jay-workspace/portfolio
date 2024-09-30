@@ -13,7 +13,6 @@
     &__dp {
       transform: translate(-2.5%, -2.5%);
       animation: floater 5s infinite linear;
-      //transition: ease 0s;
       box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
       border: 5px $base-color solid;
     }
@@ -41,7 +40,7 @@
       font-size: 2.25rem;
       font-weight: 700;
       color: $base-color;
-      text-decoration: underline;
+      //text-decoration: underline;
     }
 
     &__title {
@@ -62,7 +61,7 @@
     }
 
     &__menu {
-      margin-top: 0.5rem;
+      margin-top: 1rem;
       font-size: 1.25rem;
       min-width: 15rem;
 
