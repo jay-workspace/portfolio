@@ -37,13 +37,17 @@ body {
 
 .n-layout-scroll-container {
   height: inherit !important;
+  min-width: 100vh;
 }
 
 .main{
   display: flex;
   &__layout {
-    display: flex;
     min-height: inherit; 
+    display: block;
+    .n-layout-scroll-container {
+      display: block !important;
+    }
   }
 }
 </style>
