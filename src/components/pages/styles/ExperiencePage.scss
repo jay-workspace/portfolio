@@ -1,0 +1,86 @@
+.experience-page {
+  display: grid;
+  padding-left: 3rem;
+
+  &__icon {
+    font-size: 3rem;
+    padding-right: 2rem;
+    opacity: 0;
+    transform: scale(0.5);
+    /* Start with a smaller icon */
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  &__icon.zoom-in {
+    opacity: 1;
+    transform: scale(1);
+    /* Zoom in to the original size */
+  }
+
+  &__icon-wipro {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__last {
+    margin-top: -1rem;
+    margin-left: -1rem;
+  }
+
+  &__card.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+    /* Final position after sliding in */
+  }
+
+  &__card {
+    border-radius: 0.5rem;
+    border: 0.2rem solid $main-page-font-color !important;
+    background-color: $main-page-card-color !important;
+    opacity: 0;
+    transform: translateX(15rem);
+    /* Slide in from the right */
+    transition: opacity 1s ease, transform 1s ease;
+
+    .n-card-header {
+      display: block;
+      margin-bottom: -1.5rem;
+
+      &__main {
+        font-weight: 600 !important;
+        color: $main-page-font-color !important;
+        font-size: 1.5rem !important;
+      }
+
+      &__extra {
+        font-size: 1.05rem !important;
+        font-style: italic;
+        color: $main-page-card-sub-text-font-color !important;
+      }
+    }
+
+    .n-card__content {
+      color: $main-page-font-color;
+      font-size: 1rem;
+    }
+  }
+
+  .n-timeline-item {
+    height: 20rem;
+  }
+
+  .n-timeline-item-timeline__line {
+    margin: 1.25rem 0 1.25rem -1rem;
+  }
+
+  .n-timeline-item-content {
+    width: 50rem;
+
+    &__title {
+      font-size: 1.5rem !important;
+      margin-top: -0.85rem !important;
+      font-weight: 600 !important;
+      color: $main-page-font-color !important;
+    }
+  }
+}
