@@ -1,6 +1,7 @@
 <template>
   <n-layout>
-    <experience-page/>
+    <intro-page class="page-basic"/>
+    <experience-page class="page-basic"/>
     <n-layout-content content-style="padding: 24px;">
       Pingshan Road
     </n-layout-content>
@@ -11,12 +12,14 @@
 </template>
 
 <script>
-import ExperiencePage from './pages/ExperiencePage.vue' 
+import ExperiencePage from './pages/ExperiencePage.vue'
+import IntroPage from './pages/IntroPage.vue'
 
 export default {
   name: 'MainBody',
   components: {
     'experience-page': ExperiencePage,
+    'intro-page': IntroPage
   },
   props: {
     msg: String
@@ -33,5 +36,8 @@ export default {
 }
 .n-layout-footer {
   padding: 24px;
+}
+.page-basic {
+  min-height: 100%;
 }
 </style>
