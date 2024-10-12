@@ -20,6 +20,13 @@
   &__icon-wipro {
     width: 3rem;
     height: 3rem;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+  }
+
+  .n-timeline-item-timeline__circle {
+    box-shadow: 1px 1px 2px 1px rgba(0.1, 0.1, 0.1, 0.3);
+    border-radius: 2rem;
   }
 
   &__last {
@@ -37,6 +44,7 @@
     border-radius: 0.5rem;
     border: 0.2rem solid $main-page-font-color !important;
     background-color: $main-page-card-color !important;
+    box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.6);
     opacity: 0;
     transform: translateX(15rem);
     /* Slide in from the right */

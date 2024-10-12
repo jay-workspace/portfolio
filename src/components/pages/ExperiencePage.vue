@@ -1,6 +1,6 @@
 <template>
   <n-timeline size="large" class="experience-page">
-    <n-timeline-item>
+    <n-timeline-item ref="wipro">
       <n-card class="experience-page__card" title="Software Developer at Wipro Technologies">
         <template #header-extra>
           Jan 2014 - Mar 2016
@@ -17,6 +17,7 @@
     </n-timeline-item>
     <n-timeline-item
       type="success"
+      ref="usa"
     >
       <n-card class="experience-page__card" title="Software Engineer Intern at ShipBob, Inc.">
         <template #header-extra>
@@ -49,6 +50,7 @@
     </n-timeline-item>
     <n-timeline-item
       line-type="dashed"
+      ref="india"
     >
       <n-card class="experience-page__card" title="Software Engineer III at ShipBob India Pvt. Ltd.">
         <template #header-extra>
@@ -99,12 +101,39 @@ import WiproIcon from "../icons/experience-wipro.svg"
 import ShipBobIcon from "../icons/experience-shipbob.svg"
 
 export default defineComponent({
+  props: {
+    goToCompany: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       WiproIcon,
       ShipBobIcon
     };
   },
+  watch: {
+    goToCompany(newValue, oldValue) {
+      console.log('Prop value changed from', oldValue, 'to', newValue);
+      this.scrollTo(newValue);
+    }
+  },
+  methods: {
+    scrollTo(sectionId) {
+      const sectionElement = this.$refs[sectionId];
+      if (sectionElement && sectionElement.$el) {
+        const targetOffset = sectionElement.$el.getBoundingClientRect().left + window.scrollX;
+        sectionElement.$el.scrollTo({
+          behavior: 'auto',
+          block: 'center',
+          inline: targetOffset
+        });
+      } else {
+        console.error(`Section with ID '${sectionId}' not found.`);
+      }
+    }
+  }
 });
 </script>
 
