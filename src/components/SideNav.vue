@@ -18,6 +18,7 @@
           :indent="12"
           :options="menuOptions"
           class="side-nav__items__menu"
+          @update:value="onClickMethod"
         />
       </div>
     </div>
@@ -34,6 +35,8 @@ import {
   ConstructOutline 
 } from '@vicons/ionicons5'
 import { NIcon } from 'naive-ui'
+import ExperiencePage from './pages/ExperiencePage.vue'
+import IntroPage from './pages/IntroPage.vue'
 
 export default defineComponent({
   data() {
@@ -46,7 +49,7 @@ export default defineComponent({
       menuOptions: [
         { 
           label: "Home",
-          key: "home",
+          key: "introPage",
           icon: this.renderIcon(HomeOutline),
         },
         {
@@ -99,6 +102,11 @@ export default defineComponent({
           key: "contact",
           icon: this.renderIcon(MailUnreadOutline),
         },
+      ],
+      sections: [
+        { id: 'experience', component: ExperiencePage },
+        { id: 'introPage', component: IntroPage },
+        { id: 'wipro', component: ExperiencePage }
       ]
     };
   },
@@ -110,7 +118,10 @@ export default defineComponent({
   methods: {
     renderIcon(icon) {
       return () => h(NIcon, null, { default: () => h(icon) });
-    }
+    },
+    onClickMethod(data) {
+      this.$emit('sideNavSelect', data);
+    },
   }
 });
 </script>

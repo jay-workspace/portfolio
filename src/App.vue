@@ -1,8 +1,8 @@
 <template>
   <n-layout has-sider class="main__layout">
     <div class="main">
-      <side-nav />
-      <main-body />
+      <side-nav @sideNavSelect="moveToPage"/>
+      <main-body :moveToPage="redirectToPage"/>
   </div>
   </n-layout>
 </template>
@@ -16,7 +16,19 @@ export default {
   components: {
     'side-nav': SideNav,
     'main-body': MainBody
-  }
+  },
+  data() {
+    return {
+      redirectToPage: 'IntroPage'
+    };
+  },
+  methods: {
+    moveToPage(data) {
+      console.log('this is from app body ', this.redirectToPage)
+      this.redirectToPage = data
+      console.log('this is from app body 2', this.redirectToPage)
+    },
+  },
 }
 </script>
 

@@ -1,9 +1,9 @@
 <template>
   <n-layout>
-    <intro-page class="page-basic"/>
-    <experience-page class="page-basic"/>
+    <intro-page ref="introPage" class="page-basic"/>
+    <experience-page :goToCompany="selectedCompany" ref="wipro" class="page-basic"/>
     <n-layout-content content-style="padding: 24px;">
-      Pingshan Road
+      {{ moveToPage }}
     </n-layout-content>
     <n-layout-footer bordered>
       Chengfu Road
@@ -22,7 +22,42 @@ export default {
     'intro-page': IntroPage
   },
   props: {
-    msg: String
+    moveToPage: {
+      type: String,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      selectedCompany:'',
+      experiences: ['wipro', 'usa', 'india']
+    }
+  },
+  watch: {
+    moveToPage(newValue, oldValue) {
+      console.log('Prop value changed from', oldValue, 'to', newValue);
+      if(this.experiences.includes(newValue)) {
+        this.selectedCompany = newValue
+      }
+      else {
+        this.scrollTo(newValue);
+      }
+    }
+  },
+  methods: {
+    scrollTo(sectionId) {
+      const sectionElement = this.$refs[sectionId];
+      // const targetOffset = sectionElement.$el.offsetTop;
+      if (sectionElement && sectionElement.$el) {
+        sectionElement.$el.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'nearest'
+        });
+      } else {
+        console.error(`Section with ID '${sectionId}' not found.`);
+      }
+    }
   }
 }
 </script>
