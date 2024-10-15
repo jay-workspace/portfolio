@@ -1,0 +1,18 @@
+.n-page-header {
+  &__title {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 5rem;
+    letter-spacing: 0.75rem;
+    margin-left: 1rem;
+    color: $main-page-font-color !important;
+    margin-top: 10rem;
+  }
+}
+
+.skills-page {
+
+  &__second-row {
+    margin-top: 7rem;
+  }
+}

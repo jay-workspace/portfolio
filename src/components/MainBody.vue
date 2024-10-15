@@ -2,6 +2,7 @@
   <n-layout>
     <intro-page ref="introPage" class="page-basic"/>
     <experience-page :goToCompany="selectedCompany" ref="wipro" class="page-basic"/>
+    <skills-page :goToCompany="selectedCompany" ref="wipro" class="page-basic"/>
     <n-layout-content content-style="padding: 24px;">
       {{ moveToPage }}
     </n-layout-content>
@@ -13,12 +14,14 @@
 
 <script>
 import ExperiencePage from './pages/ExperiencePage.vue'
+import SkillsPage from './pages/SkillsPage.vue'
 import IntroPage from './pages/IntroPage.vue'
 
 export default {
   name: 'MainBody',
   components: {
     'experience-page': ExperiencePage,
+    'skills-page': SkillsPage,
     'intro-page': IntroPage
   },
   props: {

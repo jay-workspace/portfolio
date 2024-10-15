@@ -3,7 +3,7 @@ import App from './App.vue'
 import {
   NLayout, NLayoutSider, NLayoutHeader, NLayoutContent, NLayoutFooter,
   NAvatar, NGradientText, NMenu, NIcon, NTimeline, NTimelineItem,
-  NCard
+  NCard, NPageHeader, NGrid, NGridItem
 } from 'naive-ui'
 
 const app = createApp(App)
@@ -20,5 +20,8 @@ app.component('n-icon', NIcon)
 app.component('n-timeline', NTimeline)
 app.component('n-timeline-item', NTimelineItem)
 app.component('n-card', NCard)
+app.component('n-page-header', NPageHeader)
+app.component('n-grid', NGrid)
+app.component('n-gi', NGridItem)
 
 app.mount('#app')

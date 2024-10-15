@@ -1,6 +1,20 @@
+.n-page-header {
+  margin-left: 1rem;
+
+  &__title {
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    margin-bottom: 5rem;
+    letter-spacing: 0.75rem;
+    margin-left: 1rem;
+    color: $main-page-font-color !important;
+  }
+}
+
 .experience-page {
   display: grid;
   padding-left: 3rem;
+  height: 150vh;
 
   &__icon {
     font-size: 3rem;
@@ -41,13 +55,13 @@
   }
 
   &__card {
+    margin-left: 2rem;
     border-radius: 0.5rem;
     border: 0.2rem solid $main-page-font-color !important;
     background-color: $main-page-card-color !important;
     box-shadow: 1px 1px 6px 1px rgba(0, 0, 0, 0.6);
     opacity: 0;
     transform: translateX(15rem);
-    /* Slide in from the right */
     transition: opacity 1s ease, transform 1s ease;
 
     .n-card-header {
@@ -75,10 +89,32 @@
 
   .n-timeline-item {
     height: 20rem;
+    margin-left: 2rem;
   }
 
   .n-timeline-item-timeline__line {
-    margin: 1.25rem 0 1.25rem -1rem;
+    margin: 8.25rem 0 -6rem -1rem;
+    transform-origin: top;
+    animation: slideLine 3s ease-in-out;
+  }
+
+  .n-timeline-item-timeline__circle {
+    margin-top: 7rem;
+    margin-left: -1rem;
+  }
+
+  @keyframes slideLine {
+    0% {
+      transform: scaleY(0);
+    }
+
+    100% {
+      transform: scaleY(1);
+    }
+  }
+
+  .n-timeline-item-timeline__icon {
+    margin-top: 7rem;
   }
 
   .n-timeline-item-content {
