@@ -1,4 +1,9 @@
 <template>
+  <n-page-header>
+    <template #title>
+      <div class="experience-page-title">PROFESSIONAL BACKGROUND</div>
+    </template>
+  </n-page-header>
   <n-timeline size="large" class="experience-page">
     <n-timeline-item ref="wipro">
       <n-card class="experience-page__card" title="Software Developer at Wipro Technologies">
