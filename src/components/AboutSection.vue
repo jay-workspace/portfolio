@@ -40,6 +40,20 @@
           </div>
           
           <div class="interests-card card">
+            <h3 class="interests-title">Education</h3>
+            <div class="education-list">
+              <div class="education-item" v-for="education in aboutData.education" :key="education.degree">
+                <div class="education-content">
+                  <h4 class="education-degree">{{ education.degree }}</h4>
+                  <p class="education-institution">{{ education.institution }}</p>
+                  <span class="education-duration">{{ education.duration }}</span>
+                  <span class="education-location">{{ education.location }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="interests-card card">
             <h3 class="interests-title">Interests & Hobbies</h3>
             <div class="interests-grid">
               <div class="interest-item" v-for="interest in aboutData.interests" :key="interest">
@@ -94,6 +108,20 @@ export default {
           'System Programming',
           'Mobile User Experience',
           'Performance Optimization'
+        ],
+        education: [
+          {
+            degree: 'Master\'s in Computer Science',
+            institution: 'Illinois Institute of Technology, Chicago',
+            duration: 'August 2016 – May 2018',
+            location: 'Chicago, IL'
+          },
+          {
+            degree: 'Bachelor of Technology in Information Technology',
+            institution: 'Anna University, Chennai',
+            duration: 'August 2009 – May 2013',
+            location: 'Chennai, India'
+          }
         ]
       }
     }
@@ -231,6 +259,54 @@ export default {
 .interests-grid {
   display: grid;
   gap: 0.8rem;
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.education-item {
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.education-degree {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.education-institution {
+  font-size: 0.95rem;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.education-duration {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.education-location {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
 }
 
 .interest-item {

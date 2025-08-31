@@ -43,61 +43,94 @@ export default {
     return {
       skillsData: [
         {
+          name: 'Programming Languages',
+          icon: '�',
+          skills: [
+            { name: 'C#', level: 95 },
+            { name: 'JavaScript', level: 95 },
+            { name: 'Java', level: 95 },
+            { name: 'C', level: 90 },
+            { name: 'TypeScript', level: 85 },
+            { name: 'SQL', level: 90 }
+          ]
+        },
+        {
+          name: 'Frontend Technologies',
+          icon: '🎨',
+          skills: [
+            { name: 'Vue.js', level: 95 },
+            { name: 'Vue CLI', level: 90 },
+            { name: 'AngularJS', level: 85 },
+            { name: 'jQuery', level: 85 },
+            { name: 'Bootstrap', level: 90 },
+            { name: 'HTML5', level: 95 },
+            { name: 'CSS3', level: 95 },
+            { name: 'Webpack', level: 80 },
+            { name: 'Axios', level: 90 }
+          ]
+        },
+        {
+          name: 'Backend & Frameworks',
+          icon: '⚙️',
+          skills: [
+            { name: 'Entity Framework', level: 95 },
+            { name: '.NET Core', level: 95 },
+            { name: 'Moq', level: 85 },
+            { name: 'NUnit', level: 85 },
+            { name: 'OAuth 2.0', level: 90 },
+            { name: 'REST APIs', level: 95 },
+            { name: 'Struts 2.x', level: 80 },
+            { name: 'JSP', level: 80 }
+          ]
+        },
+        {
+          name: 'Azure Cloud Services',
+          icon: '☁️',
+          skills: [
+            { name: 'App Service', level: 95 },
+            { name: 'SQL Database', level: 95 },
+            { name: 'Azure Functions', level: 90 },
+            { name: 'Cosmos DB', level: 85 },
+            { name: 'API Management', level: 85 },
+            { name: 'Application Gateway', level: 80 },
+            { name: 'Blob Storage', level: 90 }
+          ]
+        },
+        {
           name: 'Mobile Development',
           icon: '📱',
           skills: [
             { name: 'Android', level: 95 },
-            { name: 'Java', level: 95 },
             { name: 'SQLite', level: 90 },
-            { name: 'JSON APIs', level: 90 },
+            { name: 'Material Design', level: 85 },
             { name: 'RecyclerView', level: 90 },
-            { name: 'Material Design', level: 85 }
+            { name: 'JSON APIs', level: 90 }
           ]
         },
         {
-          name: 'System Programming',
-          icon: '⚙️',
+          name: 'Database & Systems',
+          icon: '�️',
           skills: [
-            { name: 'C Programming', level: 95 },
             { name: 'Database Systems', level: 95 },
-            { name: 'Memory Management', level: 90 },
-            { name: 'File Systems', level: 90 },
-            { name: 'Data Structures', level: 95 },
-            { name: 'System Design', level: 85 }
-          ]
-        },
-        {
-          name: 'Database Management',
-          icon: '🛢️',
-          skills: [
             { name: 'Buffer Management', level: 95 },
             { name: 'Storage Management', level: 95 },
-            { name: 'Record Management', level: 95 },
-            { name: 'DBMS Internals', level: 90 },
-            { name: 'Page Replacement', level: 90 },
-            { name: 'Transaction Management', level: 85 }
-          ]
-        },
-        {
-          name: 'Tools & Development',
-          icon: '🛠️',
-          skills: [
-            { name: 'Git/GitHub', level: 95 },
-            { name: 'Android Studio', level: 95 },
-            { name: 'Makefile', level: 85 },
-            { name: 'Code::Blocks', level: 80 },
-            { name: 'Performance Analysis', level: 85 },
-            { name: 'Unit Testing', level: 80 }
+            { name: 'Oracle 11g', level: 85 },
+            { name: 'Memory Management', level: 90 },
+            { name: 'System Programming', level: 90 }
           ]
         }
       ],
       expertiseTags: [
-        'Android Development',
-        'Database Systems',
+        'Microservices Architecture',
+        'Micro Frontends',
+        'Event Driven Architecture',
+        'Full Stack Development',
+        'Azure Cloud Solutions',
+        'Mobile Development',
+        'Database Management',
+        'Vue.js Expert',
+        '.NET Core',
         'System Programming',
-        'Algorithm Implementation',
-        'Memory Management',
-        'Mobile Applications',
         'Data Structures',
         'Performance Optimization',
         'Low-level Programming',

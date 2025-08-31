@@ -46,9 +46,9 @@ export default {
   data() {
     return {
       portfolioData: {
-        name: 'Jayavijay Jayavelu',
+        name: 'Jayavijay',
         title: 'Senior Software Engineer',
-        description: 'Full-stack developer with expertise in Android development, system programming, and database management. Experienced in building robust mobile applications, low-level database systems, and algorithmic solutions using Java, C, and modern development practices.',
+        description: 'Full-stack developer with 10+ years of experience in enterprise software development. Expert in Vue.js, .NET Core, Azure cloud services, and microservices architecture. Proven track record in leading teams, modernizing legacy systems, and building scalable solutions for ecommerce fulfillment and logistics.',
         experience: 10,
         projects: 50,
         clients: 25

@@ -183,84 +183,7 @@ export default {
         {
           icon: '🌐',
           title: 'Full-Stack Mastery',
-          description: 'Comprehensive experience across frontend, backend, cloud services, and database management spanning 8+ years'
-        }
-      ]
-    }
-  }
-}
-            'Successfully deprecated old receiving flow',
-            'Implemented new label features improving operational efficiency',
-            'Coordinated cross-functional teams for seamless transition'
-          ],
-          technologies: ['Team Management', 'Vue.js', '.NET Core', 'Azure Services']
-        },
-        {
-          title: 'Software Engineer II',
-          company: 'ShipBob, Inc.',
-          location: 'Chicago, Illinois, U.S.A',
-          type: 'Full-time',
-          duration: 'December 2018 – April 2021',
-          description: 'Developed solutions for external fulfillment centers and created Azure functions for order management. Led UI modernization initiatives.',
-          achievements: [
-            'Integrated external fulfillment centers with identity server claims validation',
-            'Created Azure function for estimated arrival date calculation',
-            'Proposed new architecture for ShipBob Fulfillment Network',
-            'Migrated warehouse portal UI from AngularJS to Vue.js'
-          ],
-          technologies: ['Vue.js', 'Azure Functions', 'Identity Server', 'AngularJS', '.NET Framework']
-        },
-        {
-          title: 'Software Engineer Intern',
-          company: 'ShipBob, Inc.',
-          location: 'Chicago, Illinois, U.S.A',
-          type: 'Internship',
-          duration: 'January 2018 – May 2018',
-          description: 'Enhanced inventory management system and developed warehouse optimization algorithms during graduate studies.',
-          achievements: [
-            'Enhanced inventory management system maintainability',
-            'Developed shortest path algorithm for warehouse order fulfillment',
-            'Improved bin formula optimization for efficient picking',
-            'Contributed to core business logic improvements'
-          ],
-          technologies: ['Vue.js', 'JavaScript', '.NET Entity Framework', 'Algorithm Design']
-        },
-        {
-          title: 'Software Developer',
-          company: 'Wipro Technologies',
-          location: 'Chennai, India',
-          type: 'Full-time',
-          duration: 'January 2014 – March 2016',
-          description: 'Developed enterprise applications for major clients including ANZ Bank and CITI. Worked on web applications, server migrations, and administrative tools.',
-          achievements: [
-            'Developed attendance tracking application for Free Pool employees',
-            'Led ANZ Bank server migration from Windows 2000 to Windows 2012',
-            'Upgraded JAVA applications from version 1.5 to 1.7',
-            'Built admin application for CITI underwriter policy management'
-          ],
-          technologies: ['AngularJS', 'Java', 'Struts 2.x', 'Oracle 11g', 'REST APIs', 'Spring Security']
-        }
-      ],
-      careerHighlights: [
-        {
-          icon: '🏗️',
-          title: 'Microservices Architecture',
-          description: 'Led migration from monolith to microservices and micro frontends at ShipBob'
-        },
-        {
-          icon: '👥',
-          title: 'Engineering Management',
-          description: 'Successfully managed engineering teams and led technical architecture decisions'
-        },
-        {
-          icon: '☁️',
-          title: 'Azure Cloud Expertise',
-          description: 'Extensive experience with Azure Functions, App Services, and cloud architecture'
-        },
-        {
-          icon: '🎯',
-          title: 'System Modernization',
-          description: 'Led multiple migrations from legacy systems to modern Vue.js and .NET Core'
+          description: 'Comprehensive experience across frontend, backend, cloud services, and database management spanning 10+ years'
         }
       ]
     }
@@ -271,173 +194,267 @@ export default {
 <style scoped>
 .experience-timeline {
   position: relative;
-  margin-bottom: 4rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .timeline-item {
   display: flex;
-  gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    margin-bottom: 1.5rem;
+  }
 }
 
 .timeline-marker {
   position: relative;
-  z-index: 2;
+  flex-shrink: 0;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .timeline-marker {
+    margin-right: 1rem;
+  }
 }
 
 .marker-dot {
-  width: 20px;
-  height: 20px;
-  background: linear-gradient(45deg, #3182ce, #2b77cb);
+  width: 1rem;
+  height: 1rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   border-radius: 50%;
-  border: 4px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  z-index: 3;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  z-index: 2;
+  flex-shrink: 0;
 }
 
 .marker-line {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
   width: 2px;
-  height: 80px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  background: linear-gradient(to bottom, #667eea 0%, #764ba2 100%);
+  flex-grow: 1;
+  margin-top: 0.5rem;
+  opacity: 0.6;
 }
 
 .timeline-content {
   flex: 1;
-  text-align: left;
-  margin-top: -10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .timeline-content {
+    padding: 1rem;
+  }
+}
+
+.timeline-content:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .job-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 1.5rem;
-  flex-wrap: wrap;
+  margin-bottom: 1rem;
   gap: 1rem;
 }
 
+@media (max-width: 640px) {
+  .job-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.job-info {
+  flex: 1;
+}
+
 .job-title {
-  color: white;
-  font-size: 1.4rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
   font-weight: 600;
+  color: #fff;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .company-name {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2vw, 1.1rem);
   font-weight: 500;
-  margin-bottom: 0.8rem;
+  color: #667eea;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .job-details {
   display: flex;
-  gap: 2rem;
-  font-size: 0.9rem;
+  gap: 1rem;
+  font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+}
+
+@media (max-width: 480px) {
+  .job-details {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+.job-location,
+.job-type {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  white-space: nowrap;
+}
+
+.job-duration {
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .job-duration {
+    align-self: flex-start;
+  }
 }
 
 .duration-badge {
-  background: linear-gradient(45deg, #3182ce, #2b77cb);
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 600;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #fff;
+  padding: 0.375rem 0.875rem;
+  border-radius: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
   white-space: nowrap;
+}
+
+.job-description {
+  margin-top: 1rem;
 }
 
 .description-text {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-size: clamp(0.875rem, 2vw, 0.95rem);
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .achievements {
   margin-bottom: 1.5rem;
 }
 
-.achievements-title {
-  color: white;
+.achievements-title,
+.tech-title {
+  font-size: 0.9rem;
   font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.75rem;
 }
 
 .achievements-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .achievements-list li {
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: 0.8rem;
-  padding-left: 1.5rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: clamp(0.8rem, 1.8vw, 0.85rem);
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
   position: relative;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .achievements-list li::before {
-  content: '✓';
+  content: '•';
+  color: #667eea;
   position: absolute;
   left: 0;
-  color: #3182ce;
   font-weight: bold;
-}
-
-.tech-stack {
-  margin-top: 1.5rem;
-}
-
-.tech-title {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1rem;
 }
 
 .tech-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 0.5rem;
 }
 
 .tech-tag {
   background: rgba(255, 255, 255, 0.1);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.75rem;
+  font-size: 0.75rem;
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.3s ease;
-}
-
-.tech-tag:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  white-space: nowrap;
 }
 
 .experience-summary {
-  text-align: left;
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+@media (max-width: 640px) {
+  .experience-summary {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
 }
 
 .summary-title {
-  color: white;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
   font-weight: 600;
+  color: #fff;
   margin-bottom: 2rem;
-  font-size: 1.5rem;
   text-align: center;
 }
 
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: 1fr;
   gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .highlights-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .highlight-card {
@@ -445,69 +462,49 @@ export default {
   align-items: flex-start;
   gap: 1rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
 }
 
+@media (max-width: 480px) {
+  .highlight-card {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+}
+
 .highlight-card:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
 .highlight-icon {
-  font-size: 2rem;
-  min-width: 50px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.highlight-info {
+  flex: 1;
 }
 
 .highlight-title {
-  color: white;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
+  color: #fff;
   margin-bottom: 0.5rem;
+  line-height: 1.2;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .highlight-desc {
+  font-size: clamp(0.8rem, 1.8vw, 0.85rem);
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .timeline-item {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .timeline-marker {
-    align-self: flex-start;
-    margin-left: 1rem;
-  }
-  
-  .marker-line {
-    height: 60px;
-  }
-  
-  .job-header {
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .job-details {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .highlights-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .highlight-card {
-    flex-direction: column;
-    text-align: center;
-  }
-  
-  .tech-tags {
-    justify-content: center;
-  }
+  line-height: 1.4;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 </style>
