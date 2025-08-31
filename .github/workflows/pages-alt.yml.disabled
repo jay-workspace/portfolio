@@ -32,7 +32,6 @@ jobs:
         
       - name: Build
         run: |
-          npm install -g @vitejs/create-vite
           npm install -g vite
           vite build
         
