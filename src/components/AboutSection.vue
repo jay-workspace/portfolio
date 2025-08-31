@@ -60,7 +60,7 @@ export default {
   data() {
     return {
       aboutData: {
-        whoIAm: `I'm a passionate Senior Full Stack Developer with over 8 years of experience in creating robust, scalable web applications. I love turning complex problems into simple, beautiful solutions. My journey in tech started with curiosity and has evolved into a career dedicated to building amazing digital experiences.`, // TODO: Replace with your actual story
+        whoIAm: `I'm a passionate Senior Full Stack Developer with almost a decade of experience in creating robust, scalable web applications. I love turning complex problems into simple, beautiful solutions. My journey in tech started with curiosity and has evolved into a career dedicated to building amazing digital experiences.`, // TODO: Replace with your actual story
         whatIDo: `I specialize in full-stack development using modern technologies like React, Vue.js, Node.js, and Python. I work with both startups and enterprise clients to deliver high-quality software solutions. From concept to deployment, I handle every aspect of the development lifecycle with attention to detail and performance optimization.`, // TODO: Replace with your actual work description
         highlights: [
           {
@@ -85,11 +85,11 @@ export default {
           }
         ], // TODO: Replace with your actual highlights
         quickInfo: [
-          { label: 'Location', value: 'San Francisco, CA' }, // TODO: Replace with your actual location
-          { label: 'Experience', value: '8+ Years' }, // TODO: Replace with your actual experience
-          { label: 'Availability', value: 'Open to Opportunities' }, // TODO: Replace with your actual availability
-          { label: 'Education', value: 'BS Computer Science' }, // TODO: Replace with your actual education
-          { label: 'Languages', value: 'English, Spanish' }, // TODO: Replace with your actual languages
+          { label: 'Location', value: 'Chennai,TN' }, // TODO: Replace with your actual location
+          { label: 'Experience', value: '9+ Years' }, // TODO: Replace with your actual experience
+          //{ label: 'Availability', value: 'Open to Opportunities' }, // TODO: Replace with your actual availability
+          { label: 'Education', value: 'Masters in Computer Science' }, // TODO: Replace with your actual education
+          { label: 'Languages', value: 'English, Tamil' }, // TODO: Replace with your actual languages
           { label: 'Remote Work', value: 'Available' } // TODO: Replace with your actual remote work preference
         ],
         interests: [

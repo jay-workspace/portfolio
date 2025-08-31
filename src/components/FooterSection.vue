@@ -100,7 +100,7 @@ export default {
     return {
       showBackToTop: false,
       portfolioData: {
-        name: 'John Developer', // TODO: Replace with your actual name
+        name: 'Jay Developer', // TODO: Replace with your actual name
         tagline: 'Crafting digital experiences with passion and precision', // TODO: Replace with your actual tagline
         email: 'john.developer@email.com', // TODO: Replace with your actual email
         phone: '+1 (555) 123-4567', // TODO: Replace with your actual phone

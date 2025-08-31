@@ -46,10 +46,10 @@ export default {
   data() {
     return {
       portfolioData: {
-        name: 'John Developer', // TODO: Replace with your actual name
+        name: 'Jayavijay', // TODO: Replace with your actual name
         title: 'Senior Full Stack Developer', // TODO: Replace with your actual title
-        description: 'Passionate about creating innovative web solutions with 8+ years of experience in modern technologies. Specialized in React, Vue.js, Node.js, and cloud architectures.', // TODO: Replace with your actual description
-        experience: 8, // TODO: Replace with your actual years of experience
+        description: 'Passionate about creating innovative web solutions with almost a decade of experience in modern technologies. Specialized in .Net, Vue.js, Node.js, Angular.js and Azure cloud architectures.', // TODO: Replace with your actual description
+        experience: 9, // TODO: Replace with your actual years of experience
         projects: 50, // TODO: Replace with your actual number of projects
         clients: 25 // TODO: Replace with your actual number of clients
       }
