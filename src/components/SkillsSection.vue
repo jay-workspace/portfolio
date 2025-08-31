@@ -30,19 +30,6 @@
           <div class="expertise-tags">
             <span class="tag" v-for="tag in expertiseTags" :key="tag">{{ tag }}</span>
           </div>
-          
-          <div class="certification-section">
-            <h4 class="cert-title">Certifications & Achievements</h4>
-            <div class="cert-list">
-              <div class="cert-item" v-for="cert in certifications" :key="cert.name">
-                <div class="cert-icon">🏆</div>
-                <div class="cert-info">
-                  <div class="cert-name">{{ cert.name }}</div>
-                  <div class="cert-year">{{ cert.year }}</div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -115,13 +102,7 @@ export default {
         'Code Review',
         'Agile Methodologies',
         'Problem Solving'
-      ], // TODO: Replace with your actual expertise areas
-      certifications: [
-        { name: 'AWS Certified Solutions Architect', year: '2023' },
-        { name: 'React Advanced Certification', year: '2022' },
-        { name: 'MongoDB Certified Developer', year: '2022' },
-        { name: 'Scrum Master Certification', year: '2021' }
-      ] // TODO: Replace with your actual certifications
+      ] // TODO: Replace with your actual expertise areas
     }
   }
 }
@@ -189,24 +170,38 @@ export default {
 }
 
 .skill-bar {
-  height: 12px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 6px;
+  height: 16px;
+  background: 
+    linear-gradient(90deg, 
+      rgba(0, 8, 20, 0.9) 0%, 
+      rgba(0, 29, 61, 0.9) 50%, 
+      rgba(0, 8, 20, 0.9) 100%);
+  border-radius: 25px;
   overflow: hidden;
-  border: 2px solid rgba(49, 130, 206, 0.3);
+  border: 3px solid #ffff00;
   position: relative;
+  box-shadow: 
+    inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    0 0 15px rgba(255, 255, 0, 0.3);
 }
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(45deg, #3182ce, #2b77cb);
-  border-radius: 4px;
+  background: linear-gradient(90deg, #ffff00, #ff0080, #00ffff, #ff8000, #ffff00);
+  background-size: 200% 100%;
+  border-radius: 22px;
   transition: width 1s ease-in-out;
   position: relative;
-  border: 1px solid #1e40af;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: pacmanProgress 3s linear infinite;
 }
 
-/* Comic-style progress bar pattern */
+@keyframes pacmanProgress {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* Pac-Man dots in progress bar */
 .skill-progress::before {
   content: '';
   position: absolute;
@@ -215,16 +210,17 @@ export default {
   right: 0;
   bottom: 0;
   background-image: 
-    linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, transparent 50%, transparent 75%, rgba(255,255,255,0.1) 75%);
-  background-size: 8px 8px;
-  animation: comicStripes 2s linear infinite;
+    radial-gradient(circle at center, rgba(255, 255, 255, 0.8) 2px, transparent 3px);
+  background-size: 20px 16px;
+  animation: progressDots 2s linear infinite;
 }
 
-@keyframes comicStripes {
+@keyframes progressDots {
   0% { background-position: 0 0; }
-  100% { background-position: 8px 8px; }
+  100% { background-position: 20px 0; }
 }
 
+/* Pac-Man progress bar pattern */
 .skill-progress::after {
   content: '';
   position: absolute;
@@ -232,18 +228,18 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-  animation: shimmer 2s infinite;
+  background-image: 
+    linear-gradient(45deg, transparent 25%, rgba(0, 0, 0, 0.1) 25%, rgba(0, 0, 0, 0.1) 50%, transparent 50%, transparent 75%, rgba(0, 0, 0, 0.1) 75%);
+  background-size: 12px 12px;
+  animation: skillStripes 1.5s linear infinite;
 }
 
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
+@keyframes skillStripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 12px 12px; }
 }
+
+/* Remove old shimmer effect - replaced with Pac-Man animation */
 
 .skills-summary {
   text-align: left;
@@ -281,52 +277,6 @@ export default {
   transform: translateY(-2px);
 }
 
-.certification-section {
-  margin-top: 2rem;
-}
-
-.cert-title {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-.cert-list {
-  display: grid;
-  gap: 1rem;
-}
-
-.cert-item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-.cert-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateX(5px);
-}
-
-.cert-icon {
-  font-size: 1.5rem;
-}
-
-.cert-name {
-  color: white;
-  font-weight: 500;
-  font-size: 0.9rem;
-}
-
-.cert-year {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8rem;
-}
-
 @media (max-width: 768px) {
   .skills-content {
     grid-template-columns: 1fr;
@@ -349,11 +299,6 @@ export default {
   
   .expertise-tags {
     justify-content: center;
-  }
-  
-  .cert-item {
-    flex-direction: column;
-    text-align: center;
   }
 }
 </style>

@@ -17,28 +17,16 @@
               Get In Touch
             </a>
           </div>
-          
-          <div class="hero-stats">
-            <div class="stat-item card">
-              <div class="stat-number">{{ portfolioData.experience }}+</div>
-              <div class="stat-label">Years Experience</div>
-            </div>
-            <div class="stat-item card">
-              <div class="stat-number">{{ portfolioData.projects }}+</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item card">
-              <div class="stat-number">{{ portfolioData.clients }}+</div>
-              <div class="stat-label">Happy Clients</div>
-            </div>
-          </div>
         </div>
         
         <div class="hero-visual">
           <div class="hero-avatar">
             <div class="avatar-placeholder">
               <!-- TODO: Replace with your actual photo -->
-              <div class="avatar-icon">👨‍💻</div>
+              <div class="avatar-icon pacman">🟡</div>
+              <div class="ghost ghost-1">�</div>
+              <div class="ghost ghost-2">👻</div>
+              <div class="ghost ghost-3">�</div>
             </div>
             <div class="avatar-glow"></div>
           </div>
@@ -100,13 +88,28 @@ export default {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: white;
+  color: #ffff00;
   text-shadow: 
-    3px 3px 0 #1e40af,
-    6px 6px 0 #1e3a8a,
-    9px 9px 15px rgba(0, 0, 0, 0.5);
+    3px 3px 0 #ff0080,
+    6px 6px 0 #00ffff,
+    9px 9px 0 #ff8000,
+    12px 12px 0 #8000ff,
+    15px 15px 30px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  font-family: 'Courier New', monospace;
+  animation: titlePulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes titlePulse {
+  0% { 
+    transform: scale(1);
+    text-shadow: 3px 3px 0 #ff0080, 6px 6px 0 #00ffff, 9px 9px 0 #ff8000, 12px 12px 0 #8000ff, 15px 15px 30px rgba(0, 0, 0, 0.8);
+  }
+  100% { 
+    transform: scale(1.02);
+    text-shadow: 3px 3px 0 #00ffff, 6px 6px 0 #ff8000, 9px 9px 0 #8000ff, 12px 12px 0 #ff0080, 15px 15px 40px rgba(255, 255, 0, 0.8);
+  }
 }
 
 .hero-subtitle {
@@ -146,53 +149,6 @@ export default {
   transform: translateY(-2px);
 }
 
-.hero-stats {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.stat-item {
-  text-align: center;
-  padding: 1.5rem;
-  min-width: 120px;
-  border: 3px solid rgba(49, 130, 206, 0.5);
-  border-radius: 12px;
-  background: rgba(49, 130, 206, 0.1);
-  position: relative;
-  overflow: hidden;
-}
-
-/* Comic-style burst effect */
-.stat-item::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  right: -5px;
-  bottom: -5px;
-  background: 
-    radial-gradient(circle at 20% 20%, #3182ce 2px, transparent 2px),
-    radial-gradient(circle at 80% 20%, #3182ce 2px, transparent 2px),
-    radial-gradient(circle at 20% 80%, #3182ce 2px, transparent 2px),
-    radial-gradient(circle at 80% 80%, #3182ce 2px, transparent 2px);
-  background-size: 20px 20px;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.stat-number {
-  font-size: 2rem;
-  font-weight: 700;
-  color: white;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 0 #1e40af;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .hero-visual {
   display: flex;
   justify-content: center;
@@ -220,7 +176,55 @@ export default {
 }
 
 .avatar-icon {
-  font-size: 4rem;
+  font-size: 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+.pacman {
+  animation: pacmanMove 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px #ffff00);
+}
+
+@keyframes pacmanMove {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(10deg) scale(1.1); }
+  50% { transform: rotate(-10deg) scale(0.9); }
+  75% { transform: rotate(5deg) scale(1.05); }
+}
+
+.ghost {
+  position: absolute;
+  font-size: 2rem;
+  animation: ghostFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+}
+
+.ghost-1 {
+  top: 20%;
+  left: 80%;
+  animation-delay: 0s;
+  color: #ff0080;
+}
+
+.ghost-2 {
+  top: 60%;
+  left: 10%;
+  animation-delay: 1.3s;
+  color: #00ffff;
+}
+
+.ghost-3 {
+  top: 80%;
+  left: 70%;
+  animation-delay: 2.6s;
+  color: #ff8000;
+}
+
+@keyframes ghostFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.8; }
+  33% { transform: translateY(-15px) rotate(5deg); opacity: 1; }
+  66% { transform: translateY(10px) rotate(-5deg); opacity: 0.6; }
 }
 
 .avatar-glow {
@@ -229,11 +233,25 @@ export default {
   left: -20px;
   right: -20px;
   bottom: -20px;
-  background: linear-gradient(45deg, #3182ce, #2b77cb);
+  background: 
+    radial-gradient(circle at 30% 30%, #ffff00, transparent 70%),
+    radial-gradient(circle at 70% 70%, #ff0080, transparent 70%),
+    linear-gradient(45deg, #ffff00, #ff0080, #00ffff, #ff8000);
   border-radius: 50%;
-  opacity: 0.3;
-  filter: blur(20px);
-  animation: pulse 2s ease-in-out infinite;
+  opacity: 0.4;
+  filter: blur(25px);
+  animation: avatarPulse 3s ease-in-out infinite;
+}
+
+@keyframes avatarPulse {
+  0%, 100% { 
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  50% { 
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
 }
 
 .scroll-indicator {
@@ -286,11 +304,6 @@ export default {
   .hero-buttons {
     flex-direction: column;
     align-items: center;
-  }
-  
-  .hero-stats {
-    justify-content: center;
-    flex-wrap: wrap;
   }
   
   .hero-avatar {

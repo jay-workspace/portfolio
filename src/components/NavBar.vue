@@ -104,15 +104,20 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 0, 0.3) 10px, transparent 12px),
+    radial-gradient(circle at 80% 50%, rgba(255, 0, 128, 0.3) 8px, transparent 10px),
+    linear-gradient(90deg, rgba(0, 8, 20, 0.95), rgba(0, 29, 61, 0.9));
   backdrop-filter: blur(20px);
-  border-bottom: 3px solid rgba(49, 130, 206, 0.5);
+  border-bottom: 4px solid;
+  border-image: linear-gradient(90deg, #ffff00, #ff0080, #00ffff, #ff8000) 1;
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.3s ease;
   box-shadow: 
-    0 4px 0 rgba(49, 130, 206, 0.3),
-    0 8px 32px rgba(0, 0, 0, 0.2);
+    0 6px 0 rgba(255, 255, 0, 0.4),
+    0 12px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(255, 255, 0, 0.3);
 }
 
 .nav-content {
@@ -133,12 +138,20 @@ export default {
 .logo-text {
   font-size: 1.5rem;
   font-weight: 700;
-  color: white;
+  color: #ffff00;
   text-shadow: 
-    2px 2px 0 #1e40af,
-    4px 4px 8px rgba(0, 0, 0, 0.5);
+    2px 2px 0 #ff0080,
+    4px 4px 0 #00ffff,
+    6px 6px 10px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes logoGlow {
+  0% { text-shadow: 2px 2px 0 #ff0080, 4px 4px 0 #00ffff, 6px 6px 10px rgba(0, 0, 0, 0.8); }
+  100% { text-shadow: 2px 2px 0 #00ffff, 4px 4px 0 #ff8000, 6px 6px 20px rgba(255, 255, 0, 0.8); }
 }
 
 .nav-links {
@@ -148,35 +161,43 @@ export default {
 }
 
 .nav-link {
-  color: white;
+  color: #ffff00;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 8px 16px;
-  border-radius: 6px;
+  letter-spacing: 1px;
+  padding: 10px 18px;
+  border-radius: 15px;
   border: 2px solid transparent;
+  font-family: 'Courier New', monospace;
 }
 
 .nav-link:hover {
-  background: rgba(49, 130, 206, 0.2);
-  border-color: rgba(49, 130, 206, 0.5);
-  text-shadow: 1px 1px 0 #1e40af;
+  background: 
+    radial-gradient(circle at center, rgba(255, 0, 128, 0.3) 5px, transparent 6px),
+    linear-gradient(45deg, rgba(255, 255, 0, 0.2), rgba(0, 255, 255, 0.2));
+  border-color: #ff0080;
+  color: #ff0080;
+  text-shadow: 
+    1px 1px 0 #00ffff,
+    2px 2px 10px rgba(255, 0, 128, 0.8);
+  transform: scale(1.05);
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 3px;
+  height: 4px;
   bottom: -8px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(45deg, #3182ce, #2b77cb);
+  background: linear-gradient(45deg, #ffff00, #ff0080, #00ffff);
   transition: width 0.3s ease;
   border-radius: 2px;
+  box-shadow: 0 2px 10px rgba(255, 255, 0, 0.6);
 }
 
 .nav-link:hover::after,
@@ -185,8 +206,16 @@ export default {
 }
 
 .nav-link.active {
-  color: #3182ce;
-  font-weight: 600;
+  color: #ff0080;
+  font-weight: 700;
+  background: 
+    radial-gradient(circle at center, rgba(255, 255, 0, 0.3) 4px, transparent 5px),
+    linear-gradient(45deg, rgba(255, 0, 128, 0.2), rgba(0, 255, 255, 0.2));
+  border-color: #ffff00;
+  text-shadow: 
+    1px 1px 0 #ffff00,
+    2px 2px 0 #00ffff,
+    3px 3px 10px rgba(255, 0, 128, 0.8);
 }
 
 .nav-btn {
