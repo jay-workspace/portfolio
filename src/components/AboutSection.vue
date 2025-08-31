@@ -61,13 +61,8 @@ export default {
     return {
       aboutData: {
         whoIAm: `I'm a passionate Senior Full Stack Developer with almost a decade of experience in creating robust, scalable web applications. I love turning complex problems into simple, beautiful solutions. My journey in tech started with curiosity and has evolved into a career dedicated to building amazing digital experiences.`, // TODO: Replace with your actual story
-        whatIDo: `I specialize in full-stack development using modern technologies like React, Vue.js, Node.js, and Python. I work with both startups and enterprise clients to deliver high-quality software solutions. From concept to deployment, I handle every aspect of the development lifecycle with attention to detail and performance optimization.`, // TODO: Replace with your actual work description
+        whatIDo: `I specialize in full-stack development using modern technologies like .NET Framework, Vue.js, Node.js, and Azure Cloud. I work with both startups and enterprise clients to deliver high-quality software solutions. From concept to deployment, I handle every aspect of the development lifecycle with attention to detail and performance optimization.`, // TODO: Replace with your actual work description
         highlights: [
-          {
-            icon: '🚀',
-            title: 'Performance Optimization',
-            description: 'Expertise in optimizing applications for speed and scalability'
-          },
           {
             icon: '🔧',
             title: 'Full Stack Development',
@@ -76,7 +71,7 @@ export default {
           {
             icon: '☁️',
             title: 'Cloud Architecture',
-            description: 'Experience with AWS, Azure, and modern DevOps practices'
+            description: 'Experience with Azure, and modern DevOps practices'
           },
           {
             icon: '👥',
@@ -93,12 +88,11 @@ export default {
           { label: 'Remote Work', value: 'Available' } // TODO: Replace with your actual remote work preference
         ],
         interests: [
-          'Open Source Contributing',
           'Tech Blogging',
-          'Mountain Hiking',
+          'Gaming',
           'Photography',
-          'Chess',
-          'Machine Learning'
+          'Keyboard Enthusiast',
+          'Traveling'
         ] // TODO: Replace with your actual interests
       }
     }

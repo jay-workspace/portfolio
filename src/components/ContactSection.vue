@@ -143,10 +143,6 @@
               <span class="metric-number">< 24h</span>
               <span class="metric-label">Response Time</span>
             </div>
-            <div class="time-metric">
-              <span class="metric-number">2-4 weeks</span>
-              <span class="metric-label">Project Start</span>
-            </div>
           </div>
         </div>
       </div>
