@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container">
       <div class="nav-content">
-        <div class="nav-logo" @click="scrollToTop">
+        <div class="nav-logo" @click.prevent="scrollToTop">
           <span class="logo-text">{{ portfolioData.name }}</span>
         </div>
         
@@ -33,7 +33,7 @@ export default {
       isMenuOpen: false,
       activeSection: '',
       portfolioData: {
-        name: 'Jayavijay Jayavelu'
+        name: 'Jay Developer'
       }
     }
   },
@@ -70,10 +70,16 @@ export default {
       this.isMenuOpen = !this.isMenuOpen
     },
     scrollToTop() {
+      // Clear the hash from URL
+      if (window.location.hash) {
+        window.history.pushState("", document.title, window.location.pathname + window.location.search);
+      }
+      
       window.scrollTo({
         top: 0,
         behavior: 'smooth'
       })
+      this.activeSection = ''
       this.isMenuOpen = false
     },
     scrollToSection(sectionId) {
