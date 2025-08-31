@@ -3,8 +3,7 @@ name: Deploy Vue.js Portfolio
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -18,18 +17,19 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
         
     - name: Install dependencies
       run: npm install
       
     - name: Build project
       run: npm run build
-      
+      env:
+        NODE_ENV: production
+        
     - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/master'
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
         cname: jayjay.work
+        force_orphan: true
