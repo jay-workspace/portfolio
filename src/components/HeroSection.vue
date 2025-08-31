@@ -1,5 +1,25 @@
 <template>
-  <section class="hero-section">
+  <section             <div class="avatar-placeholder">
+              <!-- TODO: Replace with your actual photo -->
+              <div class="avatar-icon developer">👨‍💻</div>
+              
+              <!-- Tech Stack Icons -->
+              <div class="tech-icon tech-vue">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js" />
+              </div>
+              <div class="tech-icon tech-js">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+              </div>
+              <div class="tech-icon tech-azure">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure" />
+              </div>
+              <div class="tech-icon tech-dotnet">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg" alt=".NET" />
+              </div>
+              <div class="tech-icon tech-java">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+              </div>
+            </div>hero-section">
     <div class="container">
       <div class="hero-content">
         <div class="hero-text floating">

@@ -28,7 +28,7 @@
 
 <script>
 import NavBar from './components/NavBar.vue'
-import HeroSection from './components/HeroSection.vue'
+import HeroSection from './components/HeroSectionUpdated.vue'
 import AboutSection from './components/AboutSection.vue'
 import SkillsSection from './components/SkillsSectionUpdated.vue'
 import ExperienceSection from './components/ExperienceSectionNew.vue'
