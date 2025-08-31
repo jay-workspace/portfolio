@@ -126,6 +126,13 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  height: fit-content;
+}
+
+.about-sidebar .card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Unified card styling */
@@ -270,6 +277,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  flex: 1;
 }
 
 .education-item {
@@ -318,6 +326,8 @@ export default {
 .interests-grid {
   display: grid;
   gap: 0.75rem;
+  flex: 1;
+  align-content: start;
 }
 
 .interest-item {
