@@ -132,7 +132,6 @@ export default {
         '.NET Core',
         'System Programming',
         'Data Structures',
-        'Performance Optimization',
         'Low-level Programming',
         'Software Architecture'
       ]

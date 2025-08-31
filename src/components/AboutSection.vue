@@ -29,16 +29,6 @@
         </div>
         
         <div class="about-sidebar">
-          <div class="info-card card">
-            <h3 class="info-title">Quick Info</h3>
-            <div class="info-grid">
-              <div class="info-item" v-for="info in aboutData.quickInfo" :key="info.label">
-                <span class="info-label">{{ info.label }}:</span>
-                <span class="info-value">{{ info.value }}</span>
-              </div>
-            </div>
-          </div>
-          
           <div class="education-card card">
             <h3 class="education-title">Education</h3>
             <div class="education-list">
@@ -83,9 +73,9 @@ export default {
             description: 'Android applications with real-time data, SQLite integration, and intuitive UI/UX'
           },
           {
-            icon: '🛢️',
-            title: 'Database Systems',
-            description: 'Low-level database components including buffer management and storage systems'
+            icon: '🌐',
+            title: 'Web App Development',
+            description: 'Full-stack web applications with Vue.js, .NET Core, and Azure cloud integration'
           },
           {
             icon: '🧮',
@@ -93,21 +83,12 @@ export default {
             description: 'Efficient algorithms, data structures, and performance optimization techniques'
           }
         ],
-        quickInfo: [
-          { label: 'Location', value: 'Chicago, IL' },
-          { label: 'GitHub', value: 'github.com/jayavijay29' },
-          { label: 'LinkedIn', value: 'linkedin.com/in/jayavijay-jayavelu-79774099' },
-          { label: 'Specialization', value: 'Mobile Dev, Systems Programming' },
-          { label: 'Languages', value: 'Java, C, Android' },
-          { label: 'Repositories', value: '10+ Open Source Projects' }
-        ],
         interests: [
           'Android Development',
-          'Database Management Systems',
+          'Web Application Development',
           'Algorithm Implementation',
           'System Programming',
           'Mobile User Experience',
-          'Performance Optimization'
         ],
         education: [
           {
