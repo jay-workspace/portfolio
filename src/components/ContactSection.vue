@@ -88,21 +88,6 @@
               </div>
               
               <div class="form-group">
-                <label for="budget" class="form-label">Project Budget (Optional)</label>
-                <select 
-                  id="budget"
-                  v-model="form.budget"
-                  class="form-select"
-                >
-                  <option value="">Select budget range</option>
-                  <option value="5k-10k">$5,000 - $10,000</option>
-                  <option value="10k-25k">$10,000 - $25,000</option>
-                  <option value="25k-50k">$25,000 - $50,000</option>
-                  <option value="50k+">$50,000+</option>
-                </select>
-              </div>
-              
-              <div class="form-group">
                 <label for="message" class="form-label">Message</label>
                 <textarea 
                   id="message"
@@ -159,7 +144,6 @@ export default {
         name: '',
         email: '',
         subject: '',
-        budget: '',
         message: ''
       },
       isSubmitting: false,
@@ -221,7 +205,6 @@ export default {
           name: '',
           email: '',
           subject: '',
-          budget: '',
           message: ''
         }
       } catch (error) {
