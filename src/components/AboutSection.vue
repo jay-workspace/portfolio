@@ -4,7 +4,7 @@
       <h2 class="section-title">About Me</h2>
       
       <div class="about-content">
-        <div class="about-text">
+        <div class="about-main">
           <div class="about-card card comic-bubble">
             <h3 class="about-subtitle">Who I Am</h3>
             <p class="about-description">
@@ -28,7 +28,7 @@
           </div>
         </div>
         
-        <div class="about-info">
+        <div class="about-sidebar">
           <div class="info-card card">
             <h3 class="info-title">Quick Info</h3>
             <div class="info-grid">
@@ -39,8 +39,8 @@
             </div>
           </div>
           
-          <div class="interests-card card">
-            <h3 class="interests-title">Education</h3>
+          <div class="education-card card">
+            <h3 class="education-title">Education</h3>
             <div class="education-list">
               <div class="education-item" v-for="education in aboutData.education" :key="education.degree">
                 <div class="education-content">
@@ -132,13 +132,40 @@ export default {
 <style scoped>
 .about-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr 350px;
+  gap: 2rem;
   align-items: start;
 }
 
-.about-card {
+.about-main {
+  width: 100%;
+}
+
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Unified card styling */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+  transition: all 0.3s ease;
   text-align: left;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.5);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.about-card {
   position: relative;
 }
 
@@ -218,124 +245,135 @@ export default {
   font-size: 0.9rem;
 }
 
-.info-card,
-.interests-card {
-  text-align: left;
-  margin-bottom: 2rem;
-}
-
+/* Sidebar card titles */
 .info-title,
+.education-title,
 .interests-title {
-  color: white;
+  color: #64ffda;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
+/* Info card styles */
 .info-grid {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.75rem;
 }
 
 .info-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.info-item:last-child {
+  border-bottom: none;
+}
+
 .info-label {
-  color: rgba(255, 255, 255, 0.7);
+  color: #ccd6f6;
   font-weight: 500;
 }
 
 .info-value {
-  color: white;
-  font-weight: 600;
+  color: #a8b2d1;
+  font-weight: 400;
 }
 
-.interests-grid {
-  display: grid;
-  gap: 0.8rem;
-}
-
+/* Education card styles */
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .education-item {
-  padding: 1.25rem;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border-left: 3px solid #64ffda;
   transition: all 0.3s ease;
 }
 
 .education-item:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(3px);
 }
 
 .education-degree {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  color: #fff;
-  margin-bottom: 0.5rem;
+  color: #ccd6f6;
+  margin-bottom: 0.25rem;
   line-height: 1.3;
 }
 
 .education-institution {
-  font-size: 0.95rem;
-  color: #667eea;
-  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: #64ffda;
+  margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.4;
 }
 
 .education-duration {
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8rem;
+  color: #8892b0;
   display: block;
   margin-bottom: 0.25rem;
 }
 
 .education-location {
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: #8892b0;
   font-style: italic;
+}
+
+/* Interests card styles */
+.interests-grid {
+  display: grid;
+  gap: 0.75rem;
 }
 
 .interest-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.8rem;
-  background: rgba(255, 255, 255, 0.05);
+  gap: 0.75rem;
+  padding: 0.75rem;
+  background: rgba(255, 255, 255, 0.03);
   border-radius: 8px;
   transition: all 0.3s ease;
 }
 
 .interest-item:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(100, 255, 218, 0.1);
+  transform: translateX(5px);
 }
 
 .interest-icon {
   font-size: 1.2rem;
+  color: #64ffda;
 }
 
 .interest-text {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ccd6f6;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
   .about-content {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .about-sidebar {
+    order: -1;
   }
   
   .about-subtitle {
@@ -349,6 +387,10 @@ export default {
   
   .highlight-icon {
     min-width: auto;
+  }
+  
+  .card {
+    padding: 1rem;
   }
 }
 </style>
