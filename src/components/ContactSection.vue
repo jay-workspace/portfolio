@@ -394,11 +394,12 @@ export default {
   width: 100%;
   padding: 0.8rem 1rem;
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 8px;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
   color: white;
   font-size: 1rem;
   transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .form-input::placeholder,
@@ -412,7 +413,10 @@ export default {
   outline: none;
   border-color: #3182ce;
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+  box-shadow: 
+    0 0 0 3px rgba(49, 130, 206, 0.2),
+    0 4px 0 rgba(49, 130, 206, 0.3);
+  transform: translateY(-2px);
 }
 
 .form-select option {

@@ -106,10 +106,13 @@ export default {
   right: 0;
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(20px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 3px solid rgba(49, 130, 206, 0.5);
   z-index: 1000;
   padding: 1rem 0;
   transition: all 0.3s ease;
+  box-shadow: 
+    0 4px 0 rgba(49, 130, 206, 0.3),
+    0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 .nav-content {
@@ -131,7 +134,11 @@ export default {
   font-size: 1.5rem;
   font-weight: 700;
   color: white;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 
+    2px 2px 0 #1e40af,
+    4px 4px 8px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .nav-links {
@@ -143,20 +150,33 @@ export default {
 .nav-link {
   color: white;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(49, 130, 206, 0.2);
+  border-color: rgba(49, 130, 206, 0.5);
+  text-shadow: 1px 1px 0 #1e40af;
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
   width: 0;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
+  height: 3px;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
   background: linear-gradient(45deg, #3182ce, #2b77cb);
   transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
 .nav-link:hover::after,

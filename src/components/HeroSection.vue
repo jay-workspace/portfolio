@@ -101,6 +101,12 @@ export default {
   line-height: 1.2;
   margin-bottom: 1rem;
   color: white;
+  text-shadow: 
+    3px 3px 0 #1e40af,
+    6px 6px 0 #1e3a8a,
+    9px 9px 15px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .hero-subtitle {
@@ -149,6 +155,29 @@ export default {
   text-align: center;
   padding: 1.5rem;
   min-width: 120px;
+  border: 3px solid rgba(49, 130, 206, 0.5);
+  border-radius: 12px;
+  background: rgba(49, 130, 206, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Comic-style burst effect */
+.stat-item::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: 
+    radial-gradient(circle at 20% 20%, #3182ce 2px, transparent 2px),
+    radial-gradient(circle at 80% 20%, #3182ce 2px, transparent 2px),
+    radial-gradient(circle at 20% 80%, #3182ce 2px, transparent 2px),
+    radial-gradient(circle at 80% 80%, #3182ce 2px, transparent 2px);
+  background-size: 20px 20px;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .stat-number {
@@ -156,6 +185,7 @@ export default {
   font-weight: 700;
   color: white;
   margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 0 #1e40af;
 }
 
 .stat-label {

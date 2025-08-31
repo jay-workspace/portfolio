@@ -282,24 +282,35 @@ export default {
 
 .filter-btn {
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.3);
   color: white;
   padding: 0.8rem 1.5rem;
-  border-radius: 25px;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-weight: 500;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
 }
 
 .filter-btn:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 
+    0 4px 0 rgba(49, 130, 206, 0.5),
+    0 8px 15px rgba(0, 0, 0, 0.2);
+  border-color: rgba(49, 130, 206, 0.5);
 }
 
 .filter-btn.active {
   background: linear-gradient(45deg, #3182ce, #2b77cb);
-  border-color: transparent;
-  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.4);
+  border-color: #1e40af;
+  box-shadow: 
+    0 4px 0 #1e40af,
+    0 8px 15px rgba(49, 130, 206, 0.4);
+  text-shadow: 1px 1px 0 #1e40af;
 }
 
 .projects-grid {

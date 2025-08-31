@@ -354,6 +354,10 @@ export default {
   visibility: hidden;
   transform: translateY(20px);
   z-index: 1000;
+  border: 3px solid #1e40af;
+  box-shadow: 
+    0 4px 0 #1e40af,
+    0 8px 15px rgba(0, 0, 0, 0.3);
 }
 
 .back-to-top.visible {
@@ -363,14 +367,17 @@ export default {
 }
 
 .back-to-top:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+  transform: translateY(-8px);
+  box-shadow: 
+    0 8px 0 #1e40af,
+    0 16px 25px rgba(0, 0, 0, 0.4);
 }
 
 .back-to-top-icon {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
+  text-shadow: 1px 1px 0 #1e40af;
 }
 
 @media (max-width: 768px) {

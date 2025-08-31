@@ -189,10 +189,12 @@ export default {
 }
 
 .skill-bar {
-  height: 8px;
+  height: 12px;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
+  border: 2px solid rgba(49, 130, 206, 0.3);
+  position: relative;
 }
 
 .skill-progress {
@@ -201,6 +203,26 @@ export default {
   border-radius: 4px;
   transition: width 1s ease-in-out;
   position: relative;
+  border: 1px solid #1e40af;
+}
+
+/* Comic-style progress bar pattern */
+.skill-progress::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    linear-gradient(45deg, transparent 25%, rgba(255,255,255,0.1) 25%, rgba(255,255,255,0.1) 50%, transparent 50%, transparent 75%, rgba(255,255,255,0.1) 75%);
+  background-size: 8px 8px;
+  animation: comicStripes 2s linear infinite;
+}
+
+@keyframes comicStripes {
+  0% { background-position: 0 0; }
+  100% { background-position: 8px 8px; }
 }
 
 .skill-progress::after {

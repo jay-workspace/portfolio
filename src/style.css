@@ -15,9 +15,40 @@ body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   color: #2d3748;
-  background: linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
+  background:
+    radial-gradient(circle at 20% 80%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 119, 198, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 40% 40%, rgba(120, 219, 255, 0.1) 0%, transparent 50%),
+    linear-gradient(135deg, #1a202c 0%, #2d3748 50%, #4a5568 100%);
   min-height: 100vh;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Comic-style halftone background pattern */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+  animation: halftoneMove 20s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes halftoneMove {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 20px 20px;
+  }
 }
 
 #app {
@@ -44,10 +75,31 @@ body {
   font-weight: 700;
   margin-bottom: 3rem;
   color: #fff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow:
+    3px 3px 0 #1e40af,
+    6px 6px 10px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
 }
 
-/* Modern button styles inspired by uiverse.io */
+/* Comic-style title background */
+.section-title::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  right: -20px;
+  bottom: -10px;
+  background: linear-gradient(45deg, rgba(49, 130, 206, 0.2), rgba(43, 119, 203, 0.1));
+  border: 2px solid rgba(49, 130, 206, 0.3);
+  border-radius: 12px;
+  transform: skew(-5deg);
+  z-index: -1;
+}
+
+/* Modern button styles inspired by uiverse.io - Comic Style */
 .btn {
   position: relative;
   display: inline-flex;
@@ -55,25 +107,34 @@ body {
   justify-content: center;
   padding: 12px 24px;
   font-size: 1rem;
-  font-weight: 600;
-  border: none;
-  border-radius: 12px;
+  font-weight: 700;
+  border: 3px solid #3182ce;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   overflow: hidden;
   background: linear-gradient(45deg, #3182ce, #2b77cb);
   color: white;
-  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.4);
+  box-shadow:
+    0 4px 0 #1e40af,
+    0 8px 15px rgba(49, 130, 206, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.6);
+  box-shadow:
+    0 6px 0 #1e40af,
+    0 12px 25px rgba(49, 130, 206, 0.6);
 }
 
 .btn:active {
-  transform: translateY(0);
+  transform: translateY(2px);
+  box-shadow:
+    0 2px 0 #1e40af,
+    0 4px 10px rgba(49, 130, 206, 0.4);
 }
 
 .btn::before {
@@ -91,22 +152,46 @@ body {
   left: 100%;
 }
 
-/* Card styles inspired by uiverse.io */
+/* Card styles inspired by uiverse.io - Comic Style */
 .card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
   padding: 2rem;
   margin: 1rem;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 8px 0 rgba(0, 0, 0, 0.1),
+    0 12px 32px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Comic-style speech bubble effect */
+.card::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #3182ce, #2b77cb, #3182ce);
+  border-radius: 17px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 64px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-8px);
+  box-shadow:
+    0 12px 0 rgba(0, 0, 0, 0.15),
+    0 20px 64px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 /* Animated loader inspired by uiverse.io */

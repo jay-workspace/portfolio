@@ -5,7 +5,7 @@
       
       <div class="about-content">
         <div class="about-text">
-          <div class="about-card card">
+          <div class="about-card card comic-bubble">
             <h3 class="about-subtitle">Who I Am</h3>
             <p class="about-description">
               {{ aboutData.whoIAm }}
@@ -116,6 +116,26 @@ export default {
 
 .about-card {
   text-align: left;
+  position: relative;
+}
+
+/* Comic-style speech bubble */
+.comic-bubble {
+  border-radius: 20px;
+  position: relative;
+}
+
+.comic-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 30px;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid rgba(255, 255, 255, 0.1);
+  filter: drop-shadow(0 3px 0 rgba(49, 130, 206, 0.3));
 }
 
 .about-subtitle {
@@ -124,6 +144,9 @@ export default {
   color: white;
   margin-bottom: 1rem;
   margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 #1e40af;
 }
 
 .about-subtitle:first-child {
