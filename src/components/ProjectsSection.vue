@@ -110,90 +110,113 @@ export default {
       projectsData: [
         {
           id: 1,
-          title: 'E-Commerce Platform',
+          title: 'ShipBob Transportation Micro Frontend',
           category: 'fullstack',
-          icon: '🛒',
+          icon: '�',
           status: 'completed',
-          description: 'A modern e-commerce platform with real-time inventory management, payment processing, and admin dashboard.',
+          description: 'A comprehensive micro frontend application for the transportation domain managing carrier services, labeling, and logistics operations.',
           features: [
-            'Real-time inventory tracking',
-            'Secure payment integration',
-            'Advanced search & filtering',
-            'Mobile-responsive design',
-            'Admin analytics dashboard'
+            'Micro frontend architecture',
+            'Carrier service management',
+            'Automated labeling system',
+            'Real-time tracking integration',
+            'Multi-tenant support'
           ],
-          technologies: ['React', 'Node.js', 'MongoDB', 'Stripe API', 'AWS'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
+          technologies: ['Vue.js', '.NET Core', 'Azure Services', 'Microservices', 'OAuth 2.0'],
+          liveUrl: '#',
+          githubUrl: '#',
           metrics: [
-            { label: 'Users', value: '5K+' },
-            { label: 'Performance', value: '95%' },
-            { label: 'Uptime', value: '99.9%' }
+            { label: 'Orders', value: '100K+' },
+            { label: 'Performance', value: '98%' },
+            { label: 'Carriers', value: '50+' }
           ]
         },
         {
           id: 2,
-          title: 'Task Management App',
-          category: 'web',
+          title: 'Section 321 Compliance Infrastructure',
+          category: 'fullstack',
           icon: '📋',
           status: 'completed',
-          description: 'A collaborative task management application with real-time updates, team collaboration features, and advanced reporting.',
+          description: 'Infrastructure development for mid-market merchants to leverage Section 321 regulations for international shipping compliance.',
           features: [
-            'Real-time collaboration',
-            'Drag & drop interface',
-            'Time tracking',
-            'Team chat integration',
-            'Progress analytics'
+            'Regulatory compliance automation',
+            'Multi-merchant support',
+            'Real-time validation',
+            'Integration with existing systems',
+            'Audit trail management'
           ],
-          technologies: ['Vue.js', 'Express.js', 'PostgreSQL', 'Socket.io', 'Docker'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
+          technologies: ['Vue.js', '.NET Core', 'Azure Functions', 'SQL Server', 'API Management'],
+          liveUrl: '#',
+          githubUrl: '#',
           metrics: [
-            { label: 'Teams', value: '200+' },
-            { label: 'Tasks', value: '10K+' },
-            { label: 'Rating', value: '4.8/5' }
+            { label: 'Merchants', value: '500+' },
+            { label: 'Compliance', value: '100%' },
+            { label: 'Processing', value: '<1s' }
           ]
         },
         {
           id: 3,
-          title: 'Learning Management System',
-          category: 'fullstack',
-          icon: '🎓',
+          title: 'News Gateway Android App',
+          category: 'mobile',
+          icon: '📱',
           status: 'completed',
-          description: 'A comprehensive LMS with video streaming, interactive quizzes, progress tracking, and certification management.',
+          description: 'Android application for aggregating and displaying news from multiple sources with personalized feeds and offline reading.',
           features: [
-            'Video streaming platform',
-            'Interactive assessments',
-            'Progress tracking',
-            'Certificate generation',
-            'Discussion forums'
+            'Multi-source news aggregation',
+            'Personalized news feeds',
+            'Offline reading capability',
+            'Social sharing integration',
+            'Push notifications'
           ],
-          technologies: ['React', 'Django', 'PostgreSQL', 'Redis', 'AWS S3'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
+          technologies: ['Android', 'Java', 'REST APIs', 'SQLite', 'Material Design'],
+          liveUrl: '#',
+          githubUrl: '#',
           metrics: [
-            { label: 'Students', value: '2K+' },
-            { label: 'Courses', value: '50+' },
-            { label: 'Completion', value: '85%' }
+            { label: 'Downloads', value: '1K+' },
+            { label: 'Sources', value: '20+' },
+            { label: 'Rating', value: '4.5/5' }
           ]
         },
         {
           id: 4,
-          title: 'Mobile Banking App',
+          title: 'Stock Watch Android App',
           category: 'mobile',
-          icon: '💳',
-          status: 'in-progress',
-          description: 'A secure mobile banking application with biometric authentication, transaction management, and financial insights.',
+          icon: '�',
+          status: 'completed',
+          description: 'Real-time stock market tracking application with portfolio management, alerts, and financial analytics.',
           features: [
-            'Biometric authentication',
-            'Real-time transactions',
-            'Spending analytics',
-            'Bill payment system',
-            'Investment tracking'
+            'Real-time stock prices',
+            'Portfolio management',
+            'Price alerts',
+            'Market analytics',
+            'Watchlist management'
           ],
-          technologies: ['React Native', 'Node.js', 'MongoDB', 'JWT', 'Plaid API'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
+          technologies: ['Android', 'Java', 'Financial APIs', 'Charts', 'Firebase'],
+          liveUrl: '#',
+          githubUrl: '#',
+          metrics: [
+            { label: 'Stocks', value: '500+' },
+            { label: 'Users', value: '800+' },
+            { label: 'Updates', value: 'Real-time' }
+          ]
+        },
+        {
+          id: 5,
+          title: 'B2B Order Management System',
+          category: 'fullstack',
+          icon: '🏢',
+          status: 'completed',
+          description: 'Enterprise B2B order management system with EDI integration and automated processing workflows.',
+          features: [
+            'EDI connector integration',
+            'Automated order processing',
+            'Vendor management',
+            'Order tracking',
+            'Analytics dashboard'
+          ],
+          technologies: ['Vue.js', '.NET Core', 'EDI', 'SQL Server', 'Azure Services'],
+          liveUrl: '#',
+          githubUrl: '#',
           metrics: [
             { label: 'Security', value: 'A+' },
             { label: 'Speed', value: '<2s' },

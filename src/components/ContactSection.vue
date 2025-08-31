@@ -169,7 +169,7 @@ export default {
           type: 'email',
           icon: '📧',
           title: 'Email',
-          value: 'vijayjaya92@gmail.com', // TODO: Replace with your actual email
+          value: 'j.vijay92@icloud.com',
           note: 'Best for detailed project discussions'
         },
         {

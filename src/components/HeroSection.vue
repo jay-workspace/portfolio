@@ -46,12 +46,12 @@ export default {
   data() {
     return {
       portfolioData: {
-        name: 'Jayavijay', // TODO: Replace with your actual name
-        title: 'Senior Full Stack Developer', // TODO: Replace with your actual title
-        description: 'Passionate about creating innovative web solutions with almost a decade of experience in modern technologies. Specialized in .Net, Vue.js, Node.js, Angular.js and Azure cloud architectures.', // TODO: Replace with your actual description
-        experience: 9, // TODO: Replace with your actual years of experience
-        projects: 50, // TODO: Replace with your actual number of projects
-        clients: 25 // TODO: Replace with your actual number of clients
+        name: 'Jayavijay Jayavelu',
+        title: 'Senior Software Engineer',
+        description: 'Passionate about creating scalable web solutions with 10+ years of experience in full-stack development. Specialized in .NET Core, Vue.js, Azure Cloud, and Microservices Architecture.',
+        experience: 10,
+        projects: 50,
+        clients: 25
       }
     }
   },

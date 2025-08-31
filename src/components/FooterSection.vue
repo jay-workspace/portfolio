@@ -98,7 +98,7 @@ export default {
       portfolioData: {
         name: 'Jayavijay Jayavelu', // TODO: Replace with your actual name
         tagline: 'Crafting digital experiences with passion and precision', // TODO: Replace with your actual tagline
-        email: 'vijayjaya92@gmail.com', // TODO: Replace with your actual email
+        email: 'j.vijay92@icloud.com',
         phone: '+91 8056125039', // TODO: Replace with your actual phone
         experience: 9, // TODO: Replace with your actual years of experience
         projects: 10, // TODO: Replace with your actual number of projects

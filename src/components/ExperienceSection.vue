@@ -73,88 +73,118 @@ export default {
     return {
       experienceData: [
         {
-          title: 'Senior Full Stack Developer',
-          company: 'TechCorp Solutions',
-          location: 'San Francisco, CA',
+          title: 'Senior Software Engineer',
+          company: 'ShipBob, Inc.',
+          location: 'Chennai, Tamil Nadu, India',
           type: 'Full-time',
-          duration: '2022 - Present',
-          description: 'Leading development of scalable web applications using modern technologies. Responsible for architecture decisions, code reviews, and mentoring junior developers.',
+          duration: 'December 2022 – Present',
+          description: 'Leading development of scalable microservices and micro frontend applications for ecommerce fulfillment and logistics. Specialized in Section 321 compliance infrastructure and transportation domain solutions.',
           achievements: [
-            'Improved application performance by 40% through optimization',
-            'Led a team of 5 developers on critical client projects',
-            'Implemented CI/CD pipeline reducing deployment time by 60%',
-            'Successfully delivered 15+ projects on time and within budget'
+            'Developed new infrastructure for mid market merchants leveraging Section 321 regulations',
+            'Created micro frontend application for transportation domain handling labeling and carrier services',
+            'Architected scalable solutions for order management and fulfillment processes',
+            'Led technical decisions and mentored development teams'
           ],
-          technologies: ['React', 'Node.js', 'PostgreSQL', 'AWS', 'Docker', 'TypeScript']
+          technologies: ['Vue.js', 'C#', '.NET Core', 'Azure Services', 'Microservices', 'Micro Frontends']
         },
         {
-          title: 'Full Stack Developer',
-          company: 'StartupTech Inc.',
-          location: 'Remote',
+          title: 'Software Engineer III',
+          company: 'ShipBob, Inc.',
+          location: 'Chicago, Illinois, U.S.A',
           type: 'Full-time',
-          duration: '2020 - 2022',
-          description: 'Developed and maintained multiple web applications from concept to deployment. Worked closely with product teams to deliver user-focused solutions.',
+          duration: 'August 2021 – December 2022',
+          description: 'Developed infrastructure for B2B vendor integrations and revamped order creation processes. Led migration from monolith to microservices architecture.',
           achievements: [
-            'Built 3 major applications from scratch serving 10k+ users',
-            'Reduced API response time by 50% through database optimization',
-            'Implemented real-time features using WebSocket technology',
-            'Mentored 2 junior developers and conducted technical interviews'
+            'Built new infrastructure for B2B vendor integration using third-party EDI connector',
+            'Revamped B2B order creation by breaking monolith into micro frontend service',
+            'Successfully migrated legacy systems to Vue.js 3',
+            'Improved system maintainability and scalability'
           ],
-          technologies: ['Vue.js', 'Express.js', 'MongoDB', 'Redis', 'Jest', 'GitHub Actions']
+          technologies: ['Vue.js 3', '.NET Core', 'EDI', 'Microservices', 'Azure Functions']
         },
         {
-          title: 'Frontend Developer',
-          company: 'Digital Agency Pro',
-          location: 'New York, NY',
-          type: 'Full-time',
-          duration: '2018 - 2020',
-          description: 'Focused on creating responsive and interactive user interfaces for various client projects. Collaborated with designers and backend developers.',
+          title: 'Interim Engineering Manager',
+          company: 'ShipBob, Inc.',
+          location: 'Chicago, Illinois, U.S.A',
+          type: 'Management',
+          duration: 'May 2021 – July 2021',
+          description: 'Managed engineering team and led the deprecation of legacy inbound receiving process while implementing new label features.',
           achievements: [
-            'Delivered 20+ responsive websites with 99% client satisfaction',
-            'Improved mobile performance scores by 35% across all projects',
-            'Introduced modern build tools improving development workflow',
-            'Created reusable component library used across multiple projects'
+            'Managed development team during critical system migration',
+            'Successfully deprecated old receiving flow',
+            'Implemented new label features improving operational efficiency',
+            'Coordinated cross-functional teams for seamless transition'
           ],
-          technologies: ['JavaScript', 'React', 'SCSS', 'Webpack', 'jQuery', 'Bootstrap']
+          technologies: ['Team Management', 'Vue.js', '.NET Core', 'Azure Services']
         },
         {
-          title: 'Junior Web Developer',
-          company: 'WebSolutions Ltd.',
-          location: 'Boston, MA',
+          title: 'Software Engineer II',
+          company: 'ShipBob, Inc.',
+          location: 'Chicago, Illinois, U.S.A',
           type: 'Full-time',
-          duration: '2017 - 2018',
-          description: 'Started my professional journey developing small to medium-scale web applications. Gained experience in both frontend and backend technologies.',
+          duration: 'December 2018 – April 2021',
+          description: 'Developed solutions for external fulfillment centers and created Azure functions for order management. Led UI modernization initiatives.',
           achievements: [
-            'Completed 10+ client projects with excellent feedback',
-            'Learned and applied modern development practices',
-            'Contributed to team knowledge sharing sessions',
-            'Achieved rapid skill development and promotion within 1 year'
+            'Integrated external fulfillment centers with identity server claims validation',
+            'Created Azure function for estimated arrival date calculation',
+            'Proposed new architecture for ShipBob Fulfillment Network',
+            'Migrated warehouse portal UI from AngularJS to Vue.js'
           ],
-          technologies: ['HTML5', 'CSS3', 'JavaScript', 'PHP', 'MySQL', 'WordPress']
+          technologies: ['Vue.js', 'Azure Functions', 'Identity Server', 'AngularJS', '.NET Framework']
+        },
+        {
+          title: 'Software Engineer Intern',
+          company: 'ShipBob, Inc.',
+          location: 'Chicago, Illinois, U.S.A',
+          type: 'Internship',
+          duration: 'January 2018 – May 2018',
+          description: 'Enhanced inventory management system and developed warehouse optimization algorithms during graduate studies.',
+          achievements: [
+            'Enhanced inventory management system maintainability',
+            'Developed shortest path algorithm for warehouse order fulfillment',
+            'Improved bin formula optimization for efficient picking',
+            'Contributed to core business logic improvements'
+          ],
+          technologies: ['Vue.js', 'JavaScript', '.NET Entity Framework', 'Algorithm Design']
+        },
+        {
+          title: 'Software Developer',
+          company: 'Wipro Technologies',
+          location: 'Chennai, India',
+          type: 'Full-time',
+          duration: 'January 2014 – March 2016',
+          description: 'Developed enterprise applications for major clients including ANZ Bank and CITI. Worked on web applications, server migrations, and administrative tools.',
+          achievements: [
+            'Developed attendance tracking application for Free Pool employees',
+            'Led ANZ Bank server migration from Windows 2000 to Windows 2012',
+            'Upgraded JAVA applications from version 1.5 to 1.7',
+            'Built admin application for CITI underwriter policy management'
+          ],
+          technologies: ['AngularJS', 'Java', 'Struts 2.x', 'Oracle 11g', 'REST APIs', 'Spring Security']
         }
-      ], // TODO: Replace with your actual work experience
+      ],
       careerHighlights: [
         {
-          icon: '🚀',
-          title: 'Project Leadership',
-          description: 'Successfully led and delivered 50+ projects with teams of various sizes'
+          icon: '🏗️',
+          title: 'Microservices Architecture',
+          description: 'Led migration from monolith to microservices and micro frontends at ShipBob'
         },
         {
           icon: '👥',
-          title: 'Team Mentorship',
-          description: 'Mentored 10+ junior developers helping them advance their careers'
+          title: 'Engineering Management',
+          description: 'Successfully managed engineering teams and led technical architecture decisions'
         },
         {
-          icon: '⚡',
-          title: 'Performance Optimization',
-          description: 'Consistently improved application performance by 30-50% across projects'
+          icon: '☁️',
+          title: 'Azure Cloud Expertise',
+          description: 'Extensive experience with Azure Functions, App Services, and cloud architecture'
         },
         {
           icon: '🎯',
-          title: 'Client Satisfaction',
-          description: 'Maintained 98% client satisfaction rate throughout my career'
+          title: 'System Modernization',
+          description: 'Led multiple migrations from legacy systems to modern Vue.js and .NET Core'
         }
-      ] // TODO: Replace with your actual career highlights
+      ]
     }
   }
 }

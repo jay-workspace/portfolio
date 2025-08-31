@@ -46,63 +46,63 @@ export default {
           name: 'Frontend Development',
           icon: '🎨',
           skills: [
-            { name: 'JavaScript/TypeScript', level: 95 },
-            { name: 'React.js', level: 90 },
-            { name: 'Vue.js', level: 85 },
-            { name: 'HTML5/CSS3', level: 95 },
-            { name: 'Tailwind CSS', level: 80 },
-            { name: 'Next.js', level: 85 }
+            { name: 'Vue.js', level: 95 },
+            { name: 'JavaScript', level: 95 },
+            { name: 'AngularJS', level: 85 },
+            { name: 'HTML5/CSS3', level: 90 },
+            { name: 'jQuery', level: 85 },
+            { name: 'Bootstrap', level: 80 }
           ]
         },
         {
           name: 'Backend Development',
           icon: '⚙️',
           skills: [
-            { name: 'Node.js', level: 90 },
-            { name: 'Python', level: 85 },
-            { name: 'Express.js', level: 88 },
-            { name: 'Django/FastAPI', level: 80 },
-            { name: 'GraphQL', level: 75 },
-            { name: 'REST APIs', level: 95 }
+            { name: 'C#', level: 95 },
+            { name: '.NET Core', level: 95 },
+            { name: 'Entity Framework', level: 90 },
+            { name: 'OAuth 2.0', level: 85 },
+            { name: 'Java', level: 80 },
+            { name: 'Microservices', level: 90 }
           ]
         },
         {
-          name: 'Database & Cloud',
+          name: 'Azure & Cloud',
           icon: '☁️',
           skills: [
-            { name: 'MongoDB', level: 85 },
-            { name: 'PostgreSQL', level: 90 },
-            { name: 'Redis', level: 75 },
-            { name: 'AWS', level: 80 },
-            { name: 'Docker', level: 85 },
-            { name: 'Kubernetes', level: 70 }
+            { name: 'Azure App Service', level: 90 },
+            { name: 'Azure Functions', level: 90 },
+            { name: 'Azure SQL DB', level: 85 },
+            { name: 'Cosmos DB', level: 85 },
+            { name: 'API Management', level: 85 },
+            { name: 'Blob Storage', level: 80 }
           ]
         },
         {
-          name: 'Tools & Methodologies',
+          name: 'Tools & Architecture',
           icon: '🛠️',
           skills: [
-            { name: 'Git/GitHub', level: 95 },
-            { name: 'CI/CD', level: 85 },
-            { name: 'Agile/Scrum', level: 90 },
-            { name: 'Testing (Jest/Cypress)', level: 80 },
-            { name: 'Webpack/Vite', level: 85 },
-            { name: 'Linux/Unix', level: 80 }
+            { name: 'Webpack', level: 85 },
+            { name: 'Vue CLI', level: 90 },
+            { name: 'Axios', level: 85 },
+            { name: 'NUnit/Moq', level: 80 },
+            { name: 'Event Driven Architecture', level: 85 },
+            { name: 'Micro Frontends', level: 90 }
           ]
         }
-      ], // TODO: Replace with your actual skills and proficiency levels
+      ],
       expertiseTags: [
-        'Full Stack Development',
         'Microservices Architecture',
-        'RESTful APIs',
-        'Database Design',
-        'Performance Optimization',
-        'DevOps Practices',
+        'Micro Frontends',
+        '.NET Core',
+        'Vue.js Development',
+        'Azure Cloud Services',
+        'Event Driven Architecture',
+        'Full Stack Development',
         'Team Leadership',
-        'Code Review',
-        'Agile Methodologies',
-        'Problem Solving'
-      ] // TODO: Replace with your actual expertise areas
+        'System Migration',
+        'Performance Optimization'
+      ]
     }
   }
 }

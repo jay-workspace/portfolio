@@ -33,7 +33,7 @@ export default {
       isMenuOpen: false,
       activeSection: '',
       portfolioData: {
-        name: 'Jay Developer' // TODO: Replace with your actual name
+        name: 'Jayavijay Jayavelu'
       }
     }
   },
