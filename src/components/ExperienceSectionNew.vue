@@ -282,6 +282,7 @@ export default {
 
 .job-info {
   flex: 1;
+  text-align: left;
 }
 
 .job-title {
@@ -292,6 +293,7 @@ export default {
   line-height: 1.2;
   word-wrap: break-word;
   hyphens: auto;
+  text-align: left;
 }
 
 .company-name {
@@ -302,6 +304,7 @@ export default {
   line-height: 1.3;
   word-wrap: break-word;
   hyphens: auto;
+  text-align: left;
 }
 
 .job-details {
