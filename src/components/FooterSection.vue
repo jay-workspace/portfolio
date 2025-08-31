@@ -77,10 +77,6 @@
                 <span class="stat-value">{{ portfolioData.projects }}+</span>
                 <span class="stat-label">Projects</span>
               </div>
-              <div class="stat-item">
-                <span class="stat-value">{{ portfolioData.clients }}+</span>
-                <span class="stat-label">Clients</span>
-              </div>
             </div>
           </div>
         </div>
@@ -100,35 +96,24 @@ export default {
     return {
       showBackToTop: false,
       portfolioData: {
-        name: 'Jay Developer', // TODO: Replace with your actual name
+        name: 'Jayavijay Jayavelu', // TODO: Replace with your actual name
         tagline: 'Crafting digital experiences with passion and precision', // TODO: Replace with your actual tagline
-        email: 'john.developer@email.com', // TODO: Replace with your actual email
-        phone: '+1 (555) 123-4567', // TODO: Replace with your actual phone
-        experience: 8, // TODO: Replace with your actual years of experience
-        projects: 50, // TODO: Replace with your actual number of projects
-        clients: 25 // TODO: Replace with your actual number of clients
+        email: 'vijayjaya92@gmail.com', // TODO: Replace with your actual email
+        phone: '+91 8056125039', // TODO: Replace with your actual phone
+        experience: 9, // TODO: Replace with your actual years of experience
+        projects: 10, // TODO: Replace with your actual number of projects
       },
       socialLinks: [
         {
           platform: 'LinkedIn',
           icon: '💼',
-          url: 'https://linkedin.com/in/yourprofile' // TODO: Replace with your actual LinkedIn
+          url: 'https://www.linkedin.com/in/jayavijay-jayavelu-79774099/' // TODO: Replace with your actual LinkedIn
         },
         {
           platform: 'GitHub',
           icon: '👨‍💻',
-          url: 'https://github.com/yourusername' // TODO: Replace with your actual GitHub
+          url: 'https://github.com/jay-workspace' // TODO: Replace with your actual GitHub
         },
-        {
-          platform: 'Twitter',
-          icon: '🐦',
-          url: 'https://twitter.com/yourusername' // TODO: Replace with your actual Twitter
-        },
-        {
-          platform: 'Instagram',
-          icon: '📷',
-          url: 'https://instagram.com/yourusername' // TODO: Replace with your actual Instagram
-        }
       ]
     }
   },

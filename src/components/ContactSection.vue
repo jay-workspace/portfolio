@@ -173,21 +173,21 @@ export default {
           type: 'email',
           icon: '📧',
           title: 'Email',
-          value: 'john.developer@email.com', // TODO: Replace with your actual email
+          value: 'vijayjaya92@gmail.com', // TODO: Replace with your actual email
           note: 'Best for detailed project discussions'
         },
         {
           type: 'phone',
           icon: '📱',
           title: 'Phone',
-          value: '+1 (555) 123-4567', // TODO: Replace with your actual phone
+          value: '+91 8056125039', // TODO: Replace with your actual phone
           note: 'For urgent inquiries'
         },
         {
           type: 'location',
           icon: '📍',
           title: 'Location',
-          value: 'San Francisco, CA', // TODO: Replace with your actual location
+          value: 'Chennai, TN', // TODO: Replace with your actual location
           note: 'Available for remote work worldwide'
         }
       ],
@@ -195,23 +195,13 @@ export default {
         {
           platform: 'LinkedIn',
           icon: '💼',
-          url: 'https://linkedin.com/in/yourprofile' // TODO: Replace with your actual LinkedIn
+          url: 'https://www.linkedin.com/in/jayavijay-jayavelu-79774099/' // TODO: Replace with your actual LinkedIn
         },
         {
           platform: 'GitHub',
           icon: '👨‍💻',
-          url: 'https://github.com/yourusername' // TODO: Replace with your actual GitHub
+          url: 'https://github.com/jay-workspace' // TODO: Replace with your actual GitHub
         },
-        {
-          platform: 'Twitter',
-          icon: '🐦',
-          url: 'https://twitter.com/yourusername' // TODO: Replace with your actual Twitter
-        },
-        {
-          platform: 'Portfolio',
-          icon: '🌐',
-          url: 'https://yourwebsite.com' // TODO: Replace with your actual website
-        }
       ]
     }
   },
