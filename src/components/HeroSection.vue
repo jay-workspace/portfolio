@@ -48,7 +48,7 @@ export default {
       portfolioData: {
         name: 'Jayavijay Jayavelu',
         title: 'Senior Software Engineer',
-        description: 'Passionate about creating scalable web solutions with 10+ years of experience in full-stack development. Specialized in .NET Core, Vue.js, Azure Cloud, and Microservices Architecture.',
+        description: 'Full-stack developer with expertise in Android development, system programming, and database management. Experienced in building robust mobile applications, low-level database systems, and algorithmic solutions using Java, C, and modern development practices.',
         experience: 10,
         projects: 50,
         clients: 25
@@ -74,73 +74,135 @@ export default {
   position: relative;
   overflow: hidden;
   padding-top: 80px;
+  padding-bottom: 2rem;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .hero-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-content {
+    gap: 4rem;
+  }
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 6vw, 3.5rem);
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
   color: #ffff00;
   text-shadow: 
-    3px 3px 0 #ff0080,
-    6px 6px 0 #00ffff,
-    9px 9px 0 #ff8000,
-    12px 12px 0 #8000ff,
-    15px 15px 30px rgba(0, 0, 0, 0.8);
+    2px 2px 0 #ff0080,
+    4px 4px 0 #00ffff,
+    6px 6px 0 #ff8000,
+    8px 8px 0 #8000ff,
+    10px 10px 20px rgba(0, 0, 0, 0.8);
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0.05em;
   font-family: 'Courier New', monospace;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    letter-spacing: 0.1em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    letter-spacing: 0.15em;
+  }
+}
+
+.hero-title {
   animation: titlePulse 2s ease-in-out infinite alternate;
 }
 
 @keyframes titlePulse {
   0% { 
     transform: scale(1);
-    text-shadow: 3px 3px 0 #ff0080, 6px 6px 0 #00ffff, 9px 9px 0 #ff8000, 12px 12px 0 #8000ff, 15px 15px 30px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 0 #ff0080, 4px 4px 0 #00ffff, 6px 6px 0 #ff8000, 8px 8px 0 #8000ff, 10px 10px 20px rgba(0, 0, 0, 0.8);
   }
   100% { 
     transform: scale(1.02);
-    text-shadow: 3px 3px 0 #00ffff, 6px 6px 0 #ff8000, 9px 9px 0 #8000ff, 12px 12px 0 #ff0080, 15px 15px 40px rgba(255, 255, 0, 0.8);
+    text-shadow: 2px 2px 0 #00ffff, 4px 4px 0 #ff8000, 6px 6px 0 #8000ff, 8px 8px 0 #ff0080, 10px 10px 30px rgba(255, 255, 0, 0.8);
   }
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
 }
 
 .hero-description {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .hero-description {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .hero-buttons {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+@media (min-width: 480px) {
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-buttons {
+    justify-content: flex-start;
+    margin-bottom: 3rem;
+  }
 }
 
 .hero-btn-outline {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  white-space: nowrap;
+  text-align: center;
+  min-width: fit-content;
 }
 
 .hero-btn-outline:hover {

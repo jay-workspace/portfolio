@@ -43,65 +43,65 @@ export default {
     return {
       skillsData: [
         {
-          name: 'Frontend Development',
-          icon: '🎨',
+          name: 'Mobile Development',
+          icon: '📱',
           skills: [
-            { name: 'Vue.js', level: 95 },
-            { name: 'JavaScript', level: 95 },
-            { name: 'AngularJS', level: 85 },
-            { name: 'HTML5/CSS3', level: 90 },
-            { name: 'jQuery', level: 85 },
-            { name: 'Bootstrap', level: 80 }
+            { name: 'Android', level: 95 },
+            { name: 'Java', level: 95 },
+            { name: 'SQLite', level: 90 },
+            { name: 'JSON APIs', level: 90 },
+            { name: 'RecyclerView', level: 90 },
+            { name: 'Material Design', level: 85 }
           ]
         },
         {
-          name: 'Backend Development',
+          name: 'System Programming',
           icon: '⚙️',
           skills: [
-            { name: 'C#', level: 95 },
-            { name: '.NET Core', level: 95 },
-            { name: 'Entity Framework', level: 90 },
-            { name: 'OAuth 2.0', level: 85 },
-            { name: 'Java', level: 80 },
-            { name: 'Microservices', level: 90 }
+            { name: 'C Programming', level: 95 },
+            { name: 'Database Systems', level: 95 },
+            { name: 'Memory Management', level: 90 },
+            { name: 'File Systems', level: 90 },
+            { name: 'Data Structures', level: 95 },
+            { name: 'System Design', level: 85 }
           ]
         },
         {
-          name: 'Azure & Cloud',
-          icon: '☁️',
+          name: 'Database Management',
+          icon: '🛢️',
           skills: [
-            { name: 'Azure App Service', level: 90 },
-            { name: 'Azure Functions', level: 90 },
-            { name: 'Azure SQL DB', level: 85 },
-            { name: 'Cosmos DB', level: 85 },
-            { name: 'API Management', level: 85 },
-            { name: 'Blob Storage', level: 80 }
+            { name: 'Buffer Management', level: 95 },
+            { name: 'Storage Management', level: 95 },
+            { name: 'Record Management', level: 95 },
+            { name: 'DBMS Internals', level: 90 },
+            { name: 'Page Replacement', level: 90 },
+            { name: 'Transaction Management', level: 85 }
           ]
         },
         {
-          name: 'Tools & Architecture',
+          name: 'Tools & Development',
           icon: '🛠️',
           skills: [
-            { name: 'Webpack', level: 85 },
-            { name: 'Vue CLI', level: 90 },
-            { name: 'Axios', level: 85 },
-            { name: 'NUnit/Moq', level: 80 },
-            { name: 'Event Driven Architecture', level: 85 },
-            { name: 'Micro Frontends', level: 90 }
+            { name: 'Git/GitHub', level: 95 },
+            { name: 'Android Studio', level: 95 },
+            { name: 'Makefile', level: 85 },
+            { name: 'Code::Blocks', level: 80 },
+            { name: 'Performance Analysis', level: 85 },
+            { name: 'Unit Testing', level: 80 }
           ]
         }
       ],
       expertiseTags: [
-        'Microservices Architecture',
-        'Micro Frontends',
-        '.NET Core',
-        'Vue.js Development',
-        'Azure Cloud Services',
-        'Event Driven Architecture',
-        'Full Stack Development',
-        'Team Leadership',
-        'System Migration',
-        'Performance Optimization'
+        'Android Development',
+        'Database Systems',
+        'System Programming',
+        'Algorithm Implementation',
+        'Memory Management',
+        'Mobile Applications',
+        'Data Structures',
+        'Performance Optimization',
+        'Low-level Programming',
+        'Software Architecture'
       ]
     }
   }
@@ -111,14 +111,33 @@ export default {
 <style scoped>
 .skills-content {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 3rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   align-items: start;
+}
+
+@media (min-width: 768px) {
+  .skills-content {
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skills-content {
+    gap: 4rem;
+  }
 }
 
 .skills-categories {
   display: grid;
-  gap: 2rem;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .skills-categories {
+    gap: 2rem;
+  }
 }
 
 .skill-category {
@@ -129,17 +148,25 @@ export default {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .category-header {
+    margin-bottom: 2rem;
+  }
 }
 
 .category-icon {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
 }
 
 .category-title {
   color: white;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  word-wrap: break-word;
 }
 
 .skills-grid {

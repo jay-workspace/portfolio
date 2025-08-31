@@ -142,17 +142,28 @@ export default {
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: clamp(1.125rem, 3vw, 1.5rem);
   font-weight: 700;
   color: #ffff00;
   text-shadow: 
     2px 2px 0 #ff0080,
     4px 4px 0 #00ffff,
-    6px 6px 10px rgba(0, 0, 0, 0.8);
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    6px 6px 8px rgba(0, 0, 0, 0.5);
   font-family: 'Courier New', monospace;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  text-transform: uppercase;
   animation: logoGlow 2s ease-in-out infinite alternate;
+}
+
+@media (min-width: 768px) {
+  .logo-text {
+    max-width: none;
+    letter-spacing: 0.1em;
+  }
 }
 
 @keyframes logoGlow {
@@ -163,7 +174,27 @@ export default {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    gap: 1.5rem;
+    overflow-x: visible;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    gap: 2rem;
+  }
 }
 
 .nav-link {
@@ -173,11 +204,21 @@ export default {
   transition: all 0.3s ease;
   position: relative;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 10px 18px;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
   border-radius: 15px;
   border: 2px solid transparent;
   font-family: 'Courier New', monospace;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .nav-link {
+    padding: 0.625rem 1.125rem;
+    letter-spacing: 0.1em;
+  }
 }
 
 .nav-link:hover {
@@ -225,16 +266,25 @@ export default {
 }
 
 .nav-btn {
-  margin-left: 1rem;
-  padding: 8px 20px;
-  font-size: 0.9rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .nav-btn {
+    margin-left: 1rem;
+    padding: 0.5rem 1.25rem;
+  }
 }
 
 .nav-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  padding: 5px;
+  padding: 0.25rem;
+  z-index: 1001;
 }
 
 .nav-toggle span {
@@ -247,30 +297,57 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+  
+  .nav-content {
+    position: relative;
+  }
+  
   .nav-links {
     position: fixed;
-    top: 80px;
+    top: 100%;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 0, 0.2) 10px, transparent 12px),
+      radial-gradient(circle at 80% 50%, rgba(255, 0, 128, 0.2) 8px, transparent 10px),
+      linear-gradient(180deg, rgba(0, 8, 20, 0.98), rgba(0, 29, 61, 0.95));
     backdrop-filter: blur(20px);
     flex-direction: column;
-    padding: 2rem;
-    transform: translateY(-100vh);
+    padding: 2rem 1rem;
+    transform: translateY(-100%);
     transition: transform 0.3s ease;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(90deg, #ffff00, #ff0080, #00ffff, #ff8000) 1;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    gap: 1.5rem;
+    max-height: calc(100vh - 80px);
+    overflow-y: auto;
   }
   
   .nav-links.nav-open {
     transform: translateY(0);
   }
   
-  .nav-toggle {
-    display: flex;
+  .nav-link {
+    padding: 1rem;
+    border: 2px solid rgba(255, 235, 59, 0.3);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+    width: 100%;
   }
   
   .nav-btn {
     margin-left: 0;
     margin-top: 1rem;
+    width: 100%;
+  }
+  
+  .nav-toggle {
+    display: flex;
   }
 }
 </style>

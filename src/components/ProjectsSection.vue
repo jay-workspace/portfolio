@@ -2,6 +2,7 @@
   <section id="projects" class="section">
     <div class="container">
       <h2 class="section-title">Featured Projects</h2>
+        },title">Featured Projects</h2>
       
       <div class="projects-filter">
         <button 
@@ -232,32 +233,49 @@ export default {
 .projects-filter {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 3rem;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
   flex-wrap: wrap;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-filter {
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
 }
 
 .filter-btn {
   background: rgba(255, 255, 255, 0.1);
-  border: 3px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
+  letter-spacing: 0.05em;
+  font-size: clamp(0.75rem, 2vw, 0.875rem);
+  white-space: nowrap;
+  min-width: fit-content;
+}
+
+@media (min-width: 768px) {
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-width: 3px;
+    letter-spacing: 0.1em;
+  }
 }
 
 .filter-btn:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 
-    0 4px 0 rgba(49, 130, 206, 0.5),
-    0 8px 15px rgba(0, 0, 0, 0.2);
+    0 3px 0 rgba(49, 130, 206, 0.5),
+    0 6px 12px rgba(0, 0, 0, 0.2);
   border-color: rgba(49, 130, 206, 0.5);
 }
 
@@ -272,9 +290,22 @@ export default {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-grid {
+    margin-bottom: 4rem;
+  }
 }
 
 .project-card {
@@ -318,9 +349,12 @@ export default {
 
 .project-title {
   color: white;
-  font-size: 1.3rem;
+  font-size: clamp(1.125rem, 3vw, 1.3rem);
   font-weight: 600;
   margin: 0;
+  word-wrap: break-word;
+  hyphens: auto;
+  line-height: 1.3;
 }
 
 .status-badge {
@@ -348,6 +382,8 @@ export default {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .features-title {
@@ -382,37 +418,97 @@ export default {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
 .tech-tag {
   background: rgba(255, 255, 255, 0.1);
   color: white;
-  padding: 0.3rem 0.8rem;
+  padding: 0.25rem 0.6rem;
   border-radius: 12px;
-  font-size: 0.8rem;
+  font-size: clamp(0.75rem, 2vw, 0.8rem);
   font-weight: 500;
   border: 1px solid rgba(255, 255, 255, 0.2);
+  white-space: nowrap;
 }
 
 .projects-cta {
   text-align: center;
-  padding: 3rem 2rem;
+  padding: 2rem 1rem;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 20px;
   backdrop-filter: blur(10px);
+  margin: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .projects-cta {
+    padding: 3rem 2rem;
+    margin: 0;
+  }
 }
 
 .cta-text {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  margin-bottom: 1.5rem;
+  word-wrap: break-word;
+}
+
+@media (min-width: 768px) {
+  .cta-text {
+    margin-bottom: 2rem;
+  }
 }
 
 .cta-btn {
-  font-size: 1.1rem;
-  padding: 1rem 2rem;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  padding: 0.875rem 1.5rem;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .cta-btn {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-filter {
+    gap: 0.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+  
+  .projects-grid {
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .project-header {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  
+  .tech-stack {
+    gap: 0.4rem;
+  }
+  
+  .tech-tag {
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
+  }
+  
+  .projects-cta {
+    padding: 1.5rem 1rem;
+    margin: 0 0.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -423,11 +519,20 @@ export default {
   .project-header {
     flex-direction: column;
     gap: 0.5rem;
+    align-items: flex-start;
   }
   
   .projects-filter {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding: 0 0.5rem;
+  }
+  
+  .projects-filter::-webkit-scrollbar {
+    display: none;
   }
 }
 </style>

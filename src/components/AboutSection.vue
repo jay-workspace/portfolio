@@ -60,39 +60,40 @@ export default {
   data() {
     return {
       aboutData: {
-        whoIAm: `I'm a Senior Software Engineer with over 10 years of experience in full-stack development. I hold a Master's in Computer Science from Illinois Institute of Technology, Chicago, and have worked with leading companies like ShipBob Inc. and Wipro Technologies. My journey spans from developing enterprise applications to architecting microservices and micro frontends.`,
-        whatIDo: `I specialize in building scalable web applications using .NET Core, Vue.js, and Azure Cloud services. At ShipBob, I've led the development of micro frontend architectures, implemented Section 321 compliance infrastructure, and managed engineering teams. I'm passionate about modernizing legacy systems and creating efficient, maintainable solutions.`,
+        whoIAm: `I'm a Senior Software Engineer with a strong foundation in computer science and database systems. Based in Chicago, IL, I have extensive experience in mobile application development, system programming, and database management. My GitHub portfolio showcases projects ranging from Android applications to low-level database systems and algorithmic implementations.`,
+        whatIDo: `I specialize in building robust software solutions across multiple domains - from Android mobile applications with real-time data integration to core database management systems. My expertise includes developing buffer managers, storage systems, and record management components that form the backbone of database engines. I'm passionate about clean code, efficient algorithms, and scalable system design.`,
         highlights: [
           {
-            icon: '🏗️',
-            title: 'Microservices Architecture',
-            description: 'Designed and implemented scalable microservices and micro frontends'
+            icon: '📱',
+            title: 'Mobile Development',
+            description: 'Android applications with real-time data, SQLite integration, and intuitive UI/UX'
           },
           {
-            icon: '☁️',
-            title: 'Azure Cloud Expert',
-            description: 'Extensive experience with Azure Services, Functions, and DevOps'
+            icon: '🛢️',
+            title: 'Database Systems',
+            description: 'Low-level database components including buffer management and storage systems'
           },
           {
-            icon: '👥',
-            title: 'Engineering Leadership',
-            description: 'Managed engineering teams and led technical architecture decisions'
+            icon: '🧮',
+            title: 'Algorithm Design',
+            description: 'Efficient algorithms, data structures, and performance optimization techniques'
           }
         ],
         quickInfo: [
-          { label: 'Location', value: 'Chennai, Tamil Nadu' },
-          { label: 'Experience', value: '10+ Years' },
-          { label: 'Education', value: 'MS Computer Science - IIT Chicago' },
-          { label: 'Specialization', value: '.NET Core, Vue.js, Azure' },
-          { label: 'Languages', value: 'English, Tamil' },
-          { label: 'Remote Work', value: 'Available' }
+          { label: 'Location', value: 'Chicago, IL' },
+          { label: 'GitHub', value: 'github.com/jayavijay29' },
+          { label: 'LinkedIn', value: 'linkedin.com/in/jayavijay-jayavelu-79774099' },
+          { label: 'Specialization', value: 'Mobile Dev, Systems Programming' },
+          { label: 'Languages', value: 'Java, C, Android' },
+          { label: 'Repositories', value: '10+ Open Source Projects' }
         ],
         interests: [
-          'Microservices Architecture',
-          'Cloud Computing',
-          'Frontend Technologies',
-          'Mobile Development',
-          'Algorithm Design'
+          'Android Development',
+          'Database Management Systems',
+          'Algorithm Implementation',
+          'System Programming',
+          'Mobile User Experience',
+          'Performance Optimization'
         ]
       }
     }
