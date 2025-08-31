@@ -28,7 +28,9 @@ jobs:
       run: npm ci
 
     - name: Build 🔧
-      run: npm run build
+      run: |
+        export NODE_ENV=production
+        npm run build
 
     - name: Deploy to GitHub Pages 🚀
       uses: peaceiris/actions-gh-pages@v4
