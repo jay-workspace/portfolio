@@ -44,16 +44,6 @@
             <div class="image-placeholder">
               <span class="project-icon">{{ project.icon }}</span>
             </div>
-            <div class="project-overlay">
-              <div class="overlay-buttons">
-                <a :href="project.liveUrl" class="btn btn-small" target="_blank" rel="noopener">
-                  🚀 Live Demo
-                </a>
-                <a :href="project.githubUrl" class="btn btn-small btn-outline" target="_blank" rel="noopener">
-                  📁 Code
-                </a>
-              </div>
-            </div>
           </div>
           
           <div class="project-content">
@@ -78,13 +68,6 @@
                 <span class="tech-tag" v-for="tech in project.technologies" :key="tech">
                   {{ tech }}
                 </span>
-              </div>
-            </div>
-            
-            <div class="project-metrics">
-              <div class="metric-item" v-for="metric in project.metrics" :key="metric.label">
-                <span class="metric-value">{{ metric.value }}</span>
-                <span class="metric-label">{{ metric.label }}</span>
               </div>
             </div>
           </div>
@@ -122,14 +105,7 @@ export default {
             'Real-time tracking integration',
             'Multi-tenant support'
           ],
-          technologies: ['Vue.js', '.NET Core', 'Azure Services', 'Microservices', 'OAuth 2.0'],
-          liveUrl: '#',
-          githubUrl: '#',
-          metrics: [
-            { label: 'Orders', value: '100K+' },
-            { label: 'Performance', value: '98%' },
-            { label: 'Carriers', value: '50+' }
-          ]
+          technologies: ['Vue.js', '.NET Core', 'Azure Services', 'Microservices', 'OAuth 2.0']
         },
         {
           id: 2,
@@ -145,14 +121,7 @@ export default {
             'Integration with existing systems',
             'Audit trail management'
           ],
-          technologies: ['Vue.js', '.NET Core', 'Azure Functions', 'SQL Server', 'API Management'],
-          liveUrl: '#',
-          githubUrl: '#',
-          metrics: [
-            { label: 'Merchants', value: '500+' },
-            { label: 'Compliance', value: '100%' },
-            { label: 'Processing', value: '<1s' }
-          ]
+          technologies: ['Vue.js', '.NET Core', 'Azure Functions', 'SQL Server', 'API Management']
         },
         {
           id: 3,
@@ -168,14 +137,7 @@ export default {
             'Social sharing integration',
             'Push notifications'
           ],
-          technologies: ['Android', 'Java', 'REST APIs', 'SQLite', 'Material Design'],
-          liveUrl: '#',
-          githubUrl: '#',
-          metrics: [
-            { label: 'Downloads', value: '1K+' },
-            { label: 'Sources', value: '20+' },
-            { label: 'Rating', value: '4.5/5' }
-          ]
+          technologies: ['Android', 'Java', 'REST APIs', 'SQLite', 'Material Design']
         },
         {
           id: 4,
@@ -191,14 +153,7 @@ export default {
             'Market analytics',
             'Watchlist management'
           ],
-          technologies: ['Android', 'Java', 'Financial APIs', 'Charts', 'Firebase'],
-          liveUrl: '#',
-          githubUrl: '#',
-          metrics: [
-            { label: 'Stocks', value: '500+' },
-            { label: 'Users', value: '800+' },
-            { label: 'Updates', value: 'Real-time' }
-          ]
+          technologies: ['Android', 'Java', 'Financial APIs', 'Charts', 'Firebase']
         },
         {
           id: 5,
@@ -214,14 +169,7 @@ export default {
             'Order tracking',
             'Analytics dashboard'
           ],
-          technologies: ['Vue.js', '.NET Core', 'EDI', 'SQL Server', 'Azure Services'],
-          liveUrl: '#',
-          githubUrl: '#',
-          metrics: [
-            { label: 'Security', value: 'A+' },
-            { label: 'Speed', value: '<2s' },
-            { label: 'Rating', value: '4.9/5' }
-          ]
+          technologies: ['Vue.js', '.NET Core', 'EDI', 'SQL Server', 'Azure Services']
         },
         {
           id: 5,
@@ -237,14 +185,7 @@ export default {
             'Export capabilities',
             'Multi-tenant support'
           ],
-          technologies: ['Next.js', 'D3.js', 'Python', 'FastAPI', 'TimescaleDB'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
-          metrics: [
-            { label: 'Data Points', value: '1M+' },
-            { label: 'Charts', value: '25+' },
-            { label: 'Load Time', value: '<1s' }
-          ]
+          technologies: ['Next.js', 'D3.js', 'Python', 'FastAPI', 'TimescaleDB']
         },
         {
           id: 6,
@@ -260,14 +201,7 @@ export default {
             'Content moderation',
             'Social analytics'
           ],
-          technologies: ['Vue.js', 'Node.js', 'GraphQL', 'MongoDB', 'Socket.io'],
-          liveUrl: '#', // TODO: Replace with actual project URL
-          githubUrl: '#', // TODO: Replace with actual GitHub URL
-          metrics: [
-            { label: 'Users', value: '8K+' },
-            { label: 'Posts', value: '50K+' },
-            { label: 'Engagement', value: '78%' }
-          ]
+          technologies: ['Vue.js', 'Node.js', 'GraphQL', 'MongoDB', 'Socket.io']
         }
       ] // TODO: Replace with your actual projects
     }
@@ -374,43 +308,6 @@ export default {
   font-size: 4rem;
 }
 
-.project-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.project-card:hover .project-overlay {
-  opacity: 1;
-}
-
-.overlay-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.btn-small {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-}
-
-.btn-outline {
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.btn-outline:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
 .project-header {
   display: flex;
   justify-content: space-between;
@@ -499,29 +396,6 @@ export default {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.project-metrics {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.metric-item {
-  text-align: center;
-}
-
-.metric-value {
-  display: block;
-  color: white;
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
-.metric-label {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.8rem;
-}
-
 .projects-cta {
   text-align: center;
   padding: 3rem 2rem;
@@ -549,15 +423,6 @@ export default {
   .project-header {
     flex-direction: column;
     gap: 0.5rem;
-  }
-  
-  .overlay-buttons {
-    flex-direction: column;
-  }
-  
-  .project-metrics {
-    flex-direction: column;
-    gap: 1rem;
   }
   
   .projects-filter {
