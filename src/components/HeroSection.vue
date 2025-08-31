@@ -199,7 +199,7 @@ export default {
   left: -20px;
   right: -20px;
   bottom: -20px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   border-radius: 50%;
   opacity: 0.3;
   filter: blur(20px);

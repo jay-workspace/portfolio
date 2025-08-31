@@ -155,7 +155,7 @@ export default {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   transition: width 0.3s ease;
 }
 
@@ -165,7 +165,7 @@ export default {
 }
 
 .nav-link.active {
-  color: #667eea;
+  color: #3182ce;
   font-weight: 600;
 }
 

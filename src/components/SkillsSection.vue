@@ -197,7 +197,7 @@ export default {
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   border-radius: 4px;
   transition: width 1s ease-in-out;
   position: relative;

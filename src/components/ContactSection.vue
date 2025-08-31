@@ -410,9 +410,9 @@ export default {
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #667eea;
+  border-color: #3182ce;
   background: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.2);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
 }
 
 .form-select option {

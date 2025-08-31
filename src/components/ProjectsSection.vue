@@ -297,9 +297,9 @@ export default {
 }
 
 .filter-btn.active {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   border-color: transparent;
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(49, 130, 206, 0.4);
 }
 
 .projects-grid {
@@ -444,7 +444,7 @@ export default {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #3182ce;
   font-weight: bold;
 }
 

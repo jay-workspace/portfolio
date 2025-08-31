@@ -194,7 +194,7 @@ export default {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -265,9 +265,9 @@ export default {
 }
 
 .social-link:hover {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
 }
 
 .social-icon {
@@ -343,7 +343,7 @@ export default {
   right: 2rem;
   width: 50px;
   height: 50px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   border-radius: 50%;
   display: flex;
   align-items: center;

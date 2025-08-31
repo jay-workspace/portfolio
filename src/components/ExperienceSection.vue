@@ -181,7 +181,7 @@ export default {
 .marker-dot {
   width: 20px;
   height: 20px;
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   border-radius: 50%;
   border: 4px solid rgba(255, 255, 255, 0.2);
   position: relative;
@@ -235,7 +235,7 @@ export default {
 }
 
 .duration-badge {
-  background: linear-gradient(45deg, #667eea, #764ba2);
+  background: linear-gradient(45deg, #3182ce, #2b77cb);
   color: white;
   padding: 0.5rem 1rem;
   border-radius: 20px;
@@ -277,7 +277,7 @@ export default {
   content: '✓';
   position: absolute;
   left: 0;
-  color: #667eea;
+  color: #3182ce;
   font-weight: bold;
 }
 
