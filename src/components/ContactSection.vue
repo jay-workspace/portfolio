@@ -18,7 +18,7 @@
                 <div class="method-icon">{{ method.icon }}</div>
                 <div class="method-info">
                   <h4 class="method-title">{{ method.title }}</h4>
-                  <p class="method-value" :class="{ 'blur-phone': method.type === 'phone' }">{{ method.value }}</p>
+                  <p class="method-value">{{ method.value }}</p>
                   <p class="method-note">{{ method.note }}</p>
                 </div>
               </div>
@@ -120,8 +120,7 @@
             <span class="status-text">Available for new projects</span>
           </div>
           <p class="availability-note">
-            I typically respond to all inquiries within 24 hours. 
-            For urgent projects, feel free to reach out via phone or WhatsApp.
+            I typically respond to all inquiries within 24 hours.
           </p>
           <div class="response-time">
             <div class="time-metric">
@@ -155,13 +154,6 @@ export default {
           title: 'Email',
           value: 'j.vijay92@icloud.com',
           note: 'Best for detailed project discussions'
-        },
-        {
-          type: 'phone',
-          icon: '📱',
-          title: 'Phone',
-          value: '+91 8056125039', // TODO: Replace with your actual phone
-          note: 'For urgent inquiries'
         },
         {
           type: 'location',
@@ -453,7 +445,7 @@ export default {
 }
 
 .availability-status {
-  display: flex;
+  display:.flex;
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
