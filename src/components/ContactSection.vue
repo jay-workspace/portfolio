@@ -18,7 +18,7 @@
                 <div class="method-icon">{{ method.icon }}</div>
                 <div class="method-info">
                   <h4 class="method-title">{{ method.title }}</h4>
-                  <p class="method-value">{{ method.value }}</p>
+                  <p class="method-value" :class="{ 'blur-phone': method.type === 'phone' }">{{ method.value }}</p>
                   <p class="method-note">{{ method.note }}</p>
                 </div>
               </div>
@@ -226,6 +226,14 @@ export default {
 </script>
 
 <style scoped>
+.blur-phone {
+  filter: blur(5px);
+  transition: filter 0.3s ease;
+}
+
+.blur-phone:hover {
+  filter: blur(0);
+}
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
