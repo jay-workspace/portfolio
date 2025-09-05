@@ -51,10 +51,6 @@
                   <span class="contact-icon">📧</span>
                   {{ portfolioData.email }}
                 </p>
-                <p class="contact-item">
-                  <span class="contact-icon">📱</span>
-                  {{ portfolioData.phone }}
-                </p>
               </div>
             </div>
           </div>
@@ -99,7 +95,6 @@ export default {
         name: 'Jayavijay Jayavelu', // TODO: Replace with your actual name
         tagline: 'Crafting digital experiences with passion and precision', // TODO: Replace with your actual tagline
         email: 'j.vijay92@icloud.com',
-        phone: '+91 8056125039', // TODO: Replace with your actual phone
         experience: 9, // TODO: Replace with your actual years of experience
         projects: 10, // TODO: Replace with your actual number of projects
       },

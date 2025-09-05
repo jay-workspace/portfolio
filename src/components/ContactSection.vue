@@ -231,9 +231,6 @@ export default {
   transition: filter 0.3s ease;
 }
 
-.blur-phone:hover {
-  filter: blur(0);
-}
 .contact-content {
   display: grid;
   grid-template-columns: 1fr 1fr;

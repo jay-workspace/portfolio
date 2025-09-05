@@ -12,10 +12,5 @@ export default defineConfig(({ command }) => {
     }
   }
 
-  // Use /portfolio/ base path only for production builds
-  if (command === 'build') {
-    config.base = '/portfolio/'
-  }
-
   return config
 })
