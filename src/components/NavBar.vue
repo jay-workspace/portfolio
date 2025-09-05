@@ -12,7 +12,7 @@
           <a href="#experience" class="nav-link" :class="{ active: activeSection === 'experience' }" @click="scrollToSection('experience')">Experience</a>
           <a href="#projects" class="nav-link" :class="{ active: activeSection === 'projects' }" @click="scrollToSection('projects')">Projects</a>
           <a href="#contact" class="nav-link" :class="{ active: activeSection === 'contact' }" @click="scrollToSection('contact')">Contact</a>
-          <a href="#" class="btn nav-btn" @click="downloadResume">Download CV</a>
+          <a href="/Jayavijay_Jayavelu_Resume_2024.pdf" download="Jayavijay_Jayavelu_Resume_2024.pdf" class="btn nav-btn">Download CV</a>
         </div>
         
         <div class="nav-toggle" @click="toggleMenu">
@@ -95,10 +95,6 @@ export default {
         })
       }
       this.isMenuOpen = false
-    },
-    downloadResume() {
-      // TODO: Replace with your actual resume download link
-      console.log('Download resume functionality - add your resume link here')
     }
   }
 }
